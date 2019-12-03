@@ -1,0 +1,88 @@
+@import 'variables.scss';
+
+.contact-form {
+    min-height: 330px !important;
+}
+
+.gform_wrapper {
+
+    li.hidden_label input {
+        margin-top: 0 !important;
+    }
+    
+    #field_1_3 {
+        height: 50px;
+    }
+
+    textarea {
+        border: none !important;
+
+        &:focus {
+            outline: $red auto 3px;
+        }
+    }
+
+    input {
+        padding: 6px !important;
+
+        &:focus {
+            outline: $red auto 3px;
+        }
+    }
+
+    ::-webkit-input-placeholder { 
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+      
+    :-ms-input-placeholder { 
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+      
+    ::placeholder {
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    input[type=submit] {
+        background: $red;
+        color: white;
+        border: none;
+        text-transform: uppercase;
+        font-size: 14px !important;
+        padding: 7px 20px 4px 20px !important;
+
+        &:hover {
+            background: $red_hover;
+        }
+    }
+
+    div.validation_error {
+        display: none !important;
+    }
+
+    .field_description_below .gfield_description {
+        padding-top: 8px !important;
+    }
+
+    .gfield_error {
+        background: transparent !important;
+        border: 0 !important;
+    }
+
+    .validation_message {
+        color: $red_hover !important;
+    }
+
+    li.gfield_error input {
+        border: 0 !important;
+    }
+    
+}
+
+#gform_confirmation_wrapper_1 {
+    .gform_confirmation_message_1 {
+        text-align: center;
+    }
+}

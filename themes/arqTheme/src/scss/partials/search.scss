@@ -1,0 +1,78 @@
+@import 'variables.scss';
+
+.search-box {
+    display: none;
+    background: white;
+    position: absolute;
+    width: 100%;
+    z-index: 11;
+    height: 600px;
+    top: 0;
+
+    @media (min-width: 992px) {
+        height: 390px;
+    }
+
+    .container, .close-window{
+        display: none;
+    }
+
+    img {
+        height: 45px;
+    }
+
+    input[type='text']{
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $red;
+        color: $black;
+        font-size: 22px;
+        padding-bottom: 4px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    ::-webkit-input-placeholder {
+        color: $ligth_gray;
+    }
+
+    .results-container {
+        .result {
+            color: $black;
+            padding: 6px 0;
+
+            &:hover {
+                text-decoration: none;
+                opacity: 0.7;
+                color: $red;
+            }
+        }
+    }
+
+    .close-window {
+        position: absolute;
+        bottom: 20px;
+
+        a {
+            color: $black;
+            font-size: 14px;
+            text-transform: uppercase;
+
+            &:hover {
+                color: $red;
+                opacity: 0.7;
+                cursor: pointer;
+            }
+        }
+
+        img {
+            height: 16px;
+            margin-right: 9px;
+            vertical-align: sub;
+        }
+
+    }
+}

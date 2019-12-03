@@ -1,0 +1,48 @@
+@import 'variables.scss';
+
+//72px
+h1 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+//34px
+h2 {
+    font-size: 28px;
+    font-family: $roboto;
+    font-weight: 300;
+}
+
+h2.pfdin {
+    font-size: 28px;
+    font-family: $pfdin;
+    font-weight: 500;
+}
+
+
+//27
+h3 {
+    font-size: 22px;
+    font-family: $roboto;
+    font-weight: 400;
+}
+
+//27
+h3.pfdin {
+    font-size: 22px;
+    font-family: $pfdin;
+    font-weight: 600;
+}
+
+//20
+h4 {
+    font-size: 18px;
+    font-family: $roboto;
+    font-weight: 400;
+}
+
+//96px
+h1.heading {
+    font-size: 55px;
+    font-weight: 400;
+}

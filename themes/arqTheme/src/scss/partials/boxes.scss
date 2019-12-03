@@ -1,0 +1,70 @@
+@import 'variables.scss';
+
+.boxes {
+
+    .box {
+        box-shadow: 1px 2px 20px 2px rgba(0, 0, 0, 0.28);
+        height: 400px;
+        background: white;
+
+        .thumbnail {
+            height: 150px;
+        }
+    }
+}
+
+.long-boxes {
+
+    .box {
+        box-shadow: 1px 2px 20px 2px rgba(0, 0, 0, 0.28);
+        height: 570px;
+        background: white;
+
+        .thumbnail {
+            height: 170px;
+        }
+    }
+}
+
+.documents {
+
+    .box {
+        box-shadow: 1px 2px 20px 2px rgba(0, 0, 0, 0.28);
+        height: 350px;
+        background: white;
+    }
+}
+
+.updates {
+
+    .box {
+        box-shadow: 1px 2px 20px 2px rgba(0, 0, 0, 0.28);
+        height: 180px;
+        background: white;
+    }
+}
+
+.news {
+
+    .box {
+        box-shadow: 1px 2px 20px 2px rgba(0, 0, 0, 0.28);
+        height: 350px;
+        background: white;
+
+        .thumbnail {
+            height: 200px;
+        }
+
+        .date {
+            color: $dark_gray;
+        }
+    }
+
+    .big {
+        height: 400px;
+
+        .thumbnail {
+            height: 280px;
+        }
+    }
+}

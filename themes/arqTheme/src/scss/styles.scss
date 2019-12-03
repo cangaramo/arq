@@ -1,0 +1,306 @@
+@import 'partials/variables.scss';
+
+
+body {
+    font-family: $pfdin;
+}
+
+@import 'partials/headings.scss';
+
+a {
+    color: $black;
+
+    &:hover {
+        color: $red;
+        text-decoration: none;
+    }
+}
+
+.bg-image {
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.layer {
+    position: absolute;
+    top: 0;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.bg-layer {
+    background: rgba(0, 0, 0, 0.18);
+}
+
+.absolute-top {
+    position: absolute;
+    top: 0;
+}
+
+.absolute-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.absolute-link {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+}
+
+.bg-whitesmoke {
+    background: $whitesmoke;
+}
+
+.bg-ligth_gray {
+    background: $ligth_gray;
+}
+
+.bg-dark_gray {
+    background: $dark_gray;
+}
+
+.bg-black {
+    background: black;
+}
+
+.color-white {
+    color: white;
+}
+
+.color-red {
+    color: $red;
+}
+
+.align-icon {
+    vertical-align: sub;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.red-line {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    border-top: 2px solid $red;
+}
+
+.white-line {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.5);
+}
+
+.download {
+    color: $black;
+
+    &:hover {
+        color: $red;
+        text-decoration: none;
+    }
+}
+
+#carouselHome {
+    height:500px;
+
+    .carousel-item .item {
+        height: 500px;
+    }
+
+    .carousel-control-prev-icon {
+        background-image: url('../../images/arrow-prev.png');
+    }
+
+    .carousel-control-next-icon {
+        background-image: url('../../images/arrow-next.png');
+    }
+
+    .carousel-control-next-icon, .carousel-control-prev-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .carousel-indicators li {
+        width: 20px;
+    }
+}
+
+.link {
+    background: $red;
+    color: white;
+    padding: 6px 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: $roboto;
+
+    &:hover{
+        text-decoration: none;
+        color: white;
+        background: #9e0317;
+    }
+}
+
+.link-white {
+    background: white;
+    color: $black;
+    padding: 6px 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: $roboto;
+
+    &:hover{
+        text-decoration: none;
+        color: white;
+        background: $black;
+    }
+}
+
+
+.more-padding-top{
+    padding: 130px 0;
+}
+
+footer {
+    color: white;
+    position: relative;
+    z-index: 2;
+
+    .address {
+        border-left: 1px solid white;
+        height: 130px;
+    }
+
+    p {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+}
+
+.addresses {
+
+    color: $dark_gray;
+
+    .address {
+        border-left: 1px solid $dark_gray;
+        height: 130px;
+
+        h4 {
+            color: black;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+}
+
+.numbers {
+
+    position: relative;
+    z-index: 2;
+
+    .num {
+        border-left: 1px solid white;
+    }
+
+    p  {
+        color: white;
+        margin-bottom: 0;
+    }
+
+    span {
+        color: white;
+        font-size: 48px;
+    }
+}
+
+
+.banner {
+    height:250px;
+}
+
+ 
+
+
+@import 'partials/boxes.scss';
+@import 'partials/parallax.scss';
+@import 'partials/header.scss';
+@import 'partials/contact_form.scss';
+@import 'partials/search.scss';
+
+.arcs {
+    position: absolute; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
+
+
+    .arc_1 {
+        height: 300px;  
+        position: relative;
+    }
+
+    .arc_2 {
+        float: right; 
+        height: 400px;  
+        position: relative;
+    }
+}
+
+.shapeA{
+    height: 550px;  
+    left: -250px; 
+    position: relative;
+}
+
+
+.products {
+    background: white;
+    position: relative;
+    z-index: 2;
+
+    .product {
+        .product-img {
+            height: 300px;
+            position: relative;
+            opacity: 0;
+        }
+    }
+}
+
+
+.short-text {
+
+    p {
+        margin-bottom: 0;
+        text-align: center;
+    }
+}
+
+
+.vacancies {
+
+    .vacancy {
+
+        p, h4 {
+            margin-bottom: 0;
+        }
+    }
+
+    .labels p {
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: $roboto;
+    }
+}
+
+
+
+

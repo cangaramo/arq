@@ -1,0 +1,103 @@
+@import 'variables.scss';
+
+header {
+    background: white;
+
+    .navbar-nav {
+        .nav-link {
+            text-transform: uppercase;
+            text-align: center;
+            color: $black;
+            font-family: $roboto;
+            font-weight: 300;
+    
+            @media (min-width:992px){
+                font-size: 14.5px;
+            }
+    
+            &:hover {
+                color: $red;
+            }
+        }
+    
+        hr {
+            border-top: 1px solid $ligth_gray;
+            width: 100%;
+    
+            @media (min-width:992px){
+                display: none;
+            }
+        }
+        
+    }
+}
+
+
+/* Header nav icon animation */
+
+.icon-bar {
+	width: 22px;
+	height: 2px;
+	display: block;
+	transition: all 0.2s;
+	margin-top: 4px;
+}
+.navbar-toggler {
+    border: none;
+    padding: 0;
+    transform: scale(1.15);
+        
+    .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+        background: $dark_gray !important;
+    }
+
+    .middle-bar {
+        opacity: 0;
+        background: $dark_gray !important;
+    }
+
+    .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+        background: $dark_gray !important;
+    }
+}
+.navbar-toggler:focus{
+	  outline: none;
+}
+
+.navbar-toggler.collapsed  {
+    .top-bar {
+        transform: rotate(0);
+    }
+    .middle-bar {
+        opacity: 1;
+    }
+    .bottom-bar {
+        transform: rotate(0);
+    }
+}
+
+.top-icons {
+
+    .fab {
+        color: $black;
+        font-size: 17px;
+
+        &:hover {
+            color: $red;
+        }
+    }
+
+    .fa-facebook-f {
+        font-size: 15px;
+        margin-top: -20px;
+    }
+}
+
+.search-btn {
+    margin-top: -2px;
+    cursor: pointer;
+}

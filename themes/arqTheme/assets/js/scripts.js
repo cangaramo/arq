@@ -1,3 +1,8 @@
+var current_page_documents = 1;
+var current_page_updates = 1;
+var current_page_news = 1;
+var num_news = 3;
+
 $( document ).ready(function() {
 
     // Count up
@@ -5,6 +10,8 @@ $( document ).ready(function() {
         delay: 10,
         time: 2000,
     });
+
+    /* Animations */
 
     if( $('.arcs').length ) {
 
@@ -23,7 +30,7 @@ $( document ).ready(function() {
         .addTo(controller);
     }
 
-    if( $('.products').length ) {
+    if( $('.products').length ) {  
 
         var controller = new ScrollMagic.Controller();
 
@@ -53,6 +60,51 @@ $( document ).ready(function() {
     }
 
 
+    if( $('.shapeArq').length ) {
+
+        var controller = new ScrollMagic.Controller();
+
+        var tween = TweenMax.staggerFromTo(".shapeArq", 2 , {top: 0, left: -50}, {top: 1500, left: 20, ease: Linear.easeNone}, 0.15);
+
+        var scene = new ScrollMagic.Scene({triggerElement: "#trigger-shapeArq", duration: 2000, offset: 0 })
+        .setTween(tween)
+        .addTo(controller);
+    }
+
+    if( $('.video-box').length ) { 
+
+        $(".video-box" ).each(function( index ) {
+
+            var controller = new ScrollMagic.Controller();
+
+            id = $(this).attr('id');            
+            text = $(".video-box .text").eq(index);
+            trigger = "#" + id;
+                
+            new ScrollMagic.Scene({triggerElement: trigger, offset: 80})
+            .setTween(text, 0.9, {opacity: 1, left:0})
+            .addTo(controller)
+            .reverse(false);  
+        });
+    }
+
+    if( $('.copy-image').length ) { 
+
+        $(".copy-image" ).each(function( index ) {
+
+            var controller = new ScrollMagic.Controller();
+
+            id = $(this).attr('id');            
+            text = $(".copy-image .text").eq(index);
+            trigger = "#" + id;
+                
+            new ScrollMagic.Scene({triggerElement: trigger, offset: -80})
+            .setTween(text, 0.9, {opacity: 1, top:0})
+            .addTo(controller)
+            .reverse(false);  
+        });
+    }
+
     /* Search */
 
     $( "#query-search" ).on('change keydown paste input', function(){
@@ -75,6 +127,88 @@ $( document ).ready(function() {
         });
     });
 
+
+    /* Load documents */
+    if( $('#documents-response').length ) {
+        LoadDocuments();
+    }
+
+    // Pagination documents 
+    $('body').on('click', '#documents-response .next-btn', function(){
+        current_page_documents = parseInt(current_page_documents) + 1;
+        LoadDocuments();
+	});
+
+	$('body').on('click', '#documents-response .prev-btn', function(){
+        current_page_documents = parseInt(current_page_documents) - 1;
+        LoadDocuments();
+	});
+    
+	$('body').on('click', '#documents-response .changePage', function(){
+        new_page = $(this).val();
+        current_page_documents = new_page;
+        LoadDocuments();
+    }); 
+
+
+    /* Load updates */
+     if( $('#updates-response').length ) {
+        LoadUpdates();
+    }
+
+    // Pagination updates 
+    $('body').on('click', '#updates-response .next-btn', function(){
+        current_page_updates = parseInt(current_page_updates) + 1;
+        LoadUpdates();
+	});
+
+	$('body').on('click', '#updates-response .prev-btn', function(){
+        current_page_updates = parseInt(current_page_updates) - 1;
+        LoadUpdates();
+	});
+    
+	$('body').on('click', '#updates-response .changePage', function(){
+        new_page = $(this).val();
+        current_page_updates = new_page;
+        LoadUpdates();
+    }); 
+
+
+    /* Load news */
+    if( $('#news-response').length ) {
+        LoadNews();
+    }
+
+    $('body').on('click', '#more-news', function(){
+        current_page_news = parseInt(current_page_news) + 1;
+        LoadNews();
+
+        num_news = parseInt(num_news) + 3;
+        total = $('#news-response').data("total");
+     
+        if (num_news >= total) {
+            $('#more-news').hide();
+        }
+
+    }); 
+
+
+    /* Vacancy */
+    $('.vacancy .open').click(function(){
+        
+        text = $(this).text();
+
+        if (text == "View"){
+            $(this).text("Close");
+        }
+        else {
+            $(this).text("View");
+        }
+
+    });
+
+
+
 });
 
 
@@ -82,7 +216,6 @@ function LoadPosts(keyword){
 
 	var ajaxurl = $(".search-box").data("url");
 
-    
     $.ajax({
         url: ajaxurl,
         type : 'post',
@@ -97,5 +230,92 @@ function LoadPosts(keyword){
 			$('.results-container').html(response);
         }
     });
+    return false;
+}
+
+
+function LoadDocuments(){
+
+    protocol = window.location.protocol
+    host = window.location.host;
+    home_url = protocol + "//" + host;
+    
+    ajax_url = home_url + "/wp-admin/admin-ajax.php";
+
+    posts_per_page = 3;
+
+    $.ajax({
+        url: ajax_url,
+        type : 'post',
+        data : {
+            action : 'load_documents',
+            current_page: current_page_documents,
+            posts_per_page: posts_per_page,
+        },
+        beforeSend:function(xhr){
+
+        },
+        success:function(response){
+			$('#documents-response').html(response);
+        }
+    });
+
+    return false;
+}
+
+
+function LoadUpdates(){
+
+    protocol = window.location.protocol
+    host = window.location.host;
+    home_url = protocol + "//" + host;
+    
+    ajax_url = home_url + "/wp-admin/admin-ajax.php";
+
+    posts_per_page = 3;
+
+    $.ajax({
+        url: ajax_url,
+        type : 'post',
+        data : {
+            action : 'load_updates',
+            current_page: current_page_updates,
+            posts_per_page: posts_per_page,
+        },
+        beforeSend:function(xhr){
+
+        },
+        success:function(response){
+			$('#updates-response').html(response);
+        }
+    });
+
+    return false;
+}
+
+
+function LoadNews(){
+
+    protocol = window.location.protocol
+    host = window.location.host;
+    home_url = protocol + "//" + host;
+    
+    ajax_url = home_url + "/wp-admin/admin-ajax.php";
+
+    $.ajax({
+        url: ajax_url,
+        type : 'post',
+        data : {
+            action : 'load_news',
+            current_page: current_page_news,
+        },
+        beforeSend:function(xhr){
+
+        },
+        success:function(response){
+			$('#news-response').append(response);
+        }
+    });
+
     return false;
 }

@@ -25,16 +25,16 @@
             </div>
         </div>
         
-        <?php foreach ($vacancies as $vacancy):
+        <?php foreach ($vacancies as $index=>$vacancy):
             $vacancy_id = $vacancy->ID;
             $title = get_the_title($vacancy_id);
             $role = get_field('role', $vacancy_id);
             $date = get_field('date', $vacancy_id);
-            $permalink = get_the_permalink($vacancy_id);
+            $copy = get_field('copy', $vacancy_id);
         ?>
 
             <hr class="white-line">
-            <div class="row py-4 vacancy">
+            <div class="row py-4 vacancy" data-toggle="collapse" href="#collapsJob<?php echo $index ?>">
                 <div class="col-4">
                     <h4><?php echo $title ?></h4>
                 </div>
@@ -45,10 +45,14 @@
                     <p><?php echo $date ?></p>
                 </div>
                 <div class="col-2">
-                    <a class="link" href="<?php echo $permalink ?>">View</a>
+                    <a class="link open">View</a>
                 </div>
             </div>
-
+            <div class="collapse" id="collapsJob<?php echo $index ?>">
+                <div class="pt-3 pb-4 pr-3">
+                    <?php echo $copy ?>
+                </div>
+            </div>
         <?php endforeach ?>
     </div>
 </div>

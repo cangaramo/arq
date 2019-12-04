@@ -91,14 +91,13 @@ $event_permalink = get_the_permalink($event);
                 </div>
 
                 <div class="parallax__layer parallax__layer--back" style="background:white">
-                    <div class="w-100 h-100" style="background-image:url('<?php echo get_bloginfo('template_url')?>/assets/images/arq-bg.png'); background-size: 50%;">
+                    <div class="w-100 h-100 bg-image" style="background-image:url('<?php echo get_bloginfo('template_url')?>/assets/images/arq-bg.png'); ">
                     </div>
                 </div>
 
             </div>
 
             <!-- Group 3 -->
-            <?php print_r($event_fields); ?>
             <div id="group3" class="parallax__group" style="height:450px; background:white; z-index: 5">
 
                 <div class="position-relative bg-dark_gray color-white">

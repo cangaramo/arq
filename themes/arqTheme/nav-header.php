@@ -148,7 +148,7 @@
                             <!-- Normal item -->
                             <?php else: ?>
                                
-                                <a class="nav-item nav-link px-lg-3 <?php echo $class ?>" href="<?php echo $url?>" target="<?php echo $target ?>"><span><?php echo $title ?></span></a>
+                                <a class="nav-item nav-link px-lg-0 mx-lg-3 <?php echo $class ?>" href="<?php echo $url?>" target="<?php echo $target ?>"><span><?php echo $title ?></span></a>
                                 <hr>
                             <?php endif; ?>
                         

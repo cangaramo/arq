@@ -25,6 +25,7 @@ foreach($fields['components'] as $field){
 
 		<?php
 			foreach($page_components as $index => $component){
+				$component_index = $index;
 				require('parts/util-get-component-values.php');
 				require(locate_template( 'parts/component-' . $component . '.php', false, false));
 			}	

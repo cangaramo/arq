@@ -1,0 +1,96 @@
+@import 'variables.scss';
+
+#documents-response, #updates-response{
+
+    .prev-btn {
+        background-image: url(../../../assets/images/prev-pag.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border: none;
+        margin-right: 22px;
+
+        &:hover {
+            background-image: url(../../../assets/images/prev-pag-black.png);
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:disabled {
+            opacity: 0;
+        }
+    }
+    
+    
+    .next-btn {
+        background-image: url(../../../assets/images/next-page.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border: none;
+        margin-left: 22px;
+
+        &:hover {
+            background-image: url(../../../assets/images/next-page-black.png);
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &:disabled {
+            opacity: 0;
+        }
+    }
+
+    .changePage {
+        background: $ligth_gray;
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+        font-size: 14px;
+        border: 1px solid $ligth_gray;
+        color: $black;
+        font-weight: 500;
+        margin-left: 1px;
+        margin-right: 1px;
+
+        &:hover {
+            background: $black;
+            color: white;
+            border: 1px solid $black;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .changePage.active {
+        background: white;
+        border: 1px solid $gray;
+
+        &:hover {
+            background: white;
+            border: 1px solid $gray;
+            color: $black;
+        }
+    }
+
+}
+
+#updates-response {
+    .prev-btn {
+        background-image: url(../../../assets/images/prev-pag-white.png);
+    }
+
+    .next-btn {
+        background-image: url(../../../assets/images/next-page-white.png); 
+    }
+}

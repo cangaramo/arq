@@ -18,7 +18,7 @@ $count = $query->post_count;
 
     <div class="container py-5">
         <div class="row">
-            <div class="col-8 offset-2">
+            <div class="col-lg-8 offset-lg-2">
                 <div id="news-response" data-total="<?php echo $count ?>"></div>
                 <a id="more-news" class="mt-4 link">More</a>
             </div>

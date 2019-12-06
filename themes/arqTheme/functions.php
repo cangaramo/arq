@@ -124,11 +124,11 @@ function load_news(){
 				$article_fields = get_fields($article_id);
 
 				if (  ($index+1)%3 == 0){
-					$class_col = 'col-12';
+					$class_col = 'col-lg-12';
 					$class_big = 'big';
 				}
 				else {
-					$class_col = 'col-6';
+					$class_col = 'col-lg-6';
 					$class_big = '';
 				}
 				?>
@@ -139,6 +139,9 @@ function load_news(){
 						<div class="px-3 py-2">
 							<h4 class="my-3"><?php echo $article_title ?></h4>
 							<p class="date"><?php echo $article_date ?></p>
+							<div class="absolute-link">
+								<a class="link">More</a>
+							</div>
 						</div>
 					</div>
 				</div>

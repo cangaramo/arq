@@ -30,7 +30,7 @@ a {
 }
 
 .bg-layer {
-    background: rgba(0, 0, 0, 0.18);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .absolute-top {
@@ -104,6 +104,19 @@ strong {
     }
 }
 
+.w-lg-75{
+    @media (min-width: 992px){
+        width: 75%;
+    }
+}
+
+
+.w-lg-50 {
+    @media (min-width: 992px){
+        width: 50%;
+    }
+}
+
 #carouselHome {
     height:500px;
 
@@ -112,11 +125,22 @@ strong {
     }
 
     .carousel-control-prev-icon {
-        background-image: url('../../images/arrow-prev.png');
+
+        display: none;
+
+        @media (min-width:992px){
+            display: block;
+            background-image: url('../../images/arrow-prev.png');
+        }
     }
 
     .carousel-control-next-icon {
-        background-image: url('../../images/arrow-next.png');
+
+        display: none;
+
+        @media (min-width:992px){
+            background-image: url('../../images/arrow-next.png');
+        }
     }
 
     .carousel-control-next-icon, .carousel-control-prev-icon {
@@ -163,7 +187,11 @@ strong {
 
 
 .more-padding-top{
-    padding: 130px 0;
+
+    @media (min-width:992px){
+        padding: 130px 0;
+    }
+    
 }
 
 footer {
@@ -322,4 +350,70 @@ footer {
     width: 100%;
     color: white !important;
 }
+
+.login-page {
+
+    h2 {
+        font-weight: 500;
+    }
+
+    #loginform {
+
+        font-family: $pfdin !important;
+
+        label {
+            display: block;
+            padding-top: 8px;
+            font-weight: 500;
+        }
+
+        input[type="text"], input[type="password"]{
+            width: 100%;
+            background: white !important;
+            border: 1px solid white;
+            padding: 4px 6px;
+            border-radius: 3px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        input:-webkit-autofill {
+            -webkit-box-shadow:0 0 0 50px white inset;
+            -webkit-text-fill-color: #333;
+            font-family: $pfdin !important;
+        }
+        
+        input:-webkit-autofill:focus {
+            -webkit-box-shadow: 0 0 0 50px white inset;
+            -webkit-text-fill-color: #333;
+            font-family: $pfdin !important;
+        } 
+        
+    
+        input[type="submit"]{
+            margin-top: 20px;
+            background: $red;
+            color: white !important;
+            padding: 6px 20px;
+            color: white;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-family: $roboto;
+            cursor: pointer;
+        
+            &:hover{
+                text-decoration: none;
+                color: white;
+                background: #9e0317;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
 

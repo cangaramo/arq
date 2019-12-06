@@ -26,7 +26,7 @@
     <!-- Animation -->
     <?php if ($background == "Animation") : ?>
 
-        <div class="absolute-top w-100 h-100">
+        <div class="absolute-top w-100 h-100 overflow-hidden">
             <div id="trigger-shapeA"></div>
             <img class="shapeA" src="<?php echo get_bloginfo('template_url')?>/assets/images/shape_1.png">
         </div>
@@ -36,13 +36,13 @@
     <!-- Publication -->
     <div class="container py-5">
 
-        <div class="row py-5">
+        <div class="row py-lg-5">
 
-            <div class="col-6">
+            <div class="col-lg-6">
                 <img class="w-100" src="<?php echo $image?>">
             </div>
 
-            <div class="col-6">
+            <div class="col-lg-6">
                 <div class="d-flex h-100 align-items-center">
                     <div>
                         <h3 class=""><?php echo $title ?></h3>

@@ -10,7 +10,7 @@
 
     <div class="container position-relative" style="z-index: 2">
         <div class="row">
-            <div class="col-5">
+            <div class="col-md-5 py-5 py-lg-0">
                 <div class="more-padding-top">
                     <h2><?php echo $event_title ?></h2>
                     <div class="my-4"><?php echo $event_fields['description'] ?></div>
@@ -20,12 +20,14 @@
         </div>
     </div>
 
-    <div class="w-100 h-100 absolute-top">
+    <div class="w-100 h-100 absolute-top d-none d-md-block">
         <div class="row h-100">
-            <div class="col-6 offset-6 h-100">
+            <div class="col-md-6 offset-md-6 h-100">
                 <div class="w-100 h-100 bg-image" style="background-image:url('<?php echo $event_fields['image'] ?>')"></div>
             </div>
         </div>
     </div>
+
+    <img class="w-100 d-block d-md-none" src="<?php echo $event_fields['image'] ?>">
 
 </div>

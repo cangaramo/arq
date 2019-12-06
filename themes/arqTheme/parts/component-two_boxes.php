@@ -6,7 +6,7 @@
 <div class="position-relative">
 
     <!-- Animation arcs -->
-    <div class="arcs">
+    <div class="arcs d-none d-lg-block">
         <div id="trigger-arcs"></div>
         <img class="arc_1" src="<?php echo get_bloginfo('template_url')?>/assets/images/arc_1.png">
         <img class="arc_2" src="<?php echo get_bloginfo('template_url')?>/assets/images/arc_2.png">
@@ -16,11 +16,11 @@
     <!-- Boxes -->
     <div class="container py-5">
 
-        <div class="px-5 more-padding-top">
+        <div class="px-lg-5 more-padding-top">
 
             <div class="row long-boxes">
 
-                <div class="col-5 offset-1">
+                <div class="col-lg-5 offset-lg-1 my-3">
                     <div class="box">
                         <div class="bg-image thumbnail" style="background-image:url('<?php echo $box['image']?>')"></div>
                         <div class="px-4 py-2">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
 
-                <div class="col-5 offset-1">
+                <div class="col-lg-5 offset-lg-1 my-3">
                     <div class="box">
                         <div class="bg-image thumbnail" style="background-image:url('<?php echo $box2['image']?>')"></div>
                         <div class="px-4 py-2">

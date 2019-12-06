@@ -11,7 +11,7 @@
 
         <h2 class="mb-5">Vacancies</h2>
 
-        <div class="row labels pb-4">
+        <div class="row labels pb-4 d-none d-lg-block">
             <div class="col-4">
                 <p>Job title</p>
             </div>
@@ -35,16 +35,16 @@
 
             <hr class="white-line">
             <div class="row py-4 vacancy" data-toggle="collapse" href="#collapsJob<?php echo $index ?>">
-                <div class="col-4">
+                <div class="col-lg-4 py-1">
                     <h4><?php echo $title ?></h4>
                 </div>
-                <div class="col-3">
+                <div class="col-lg-3">
                     <p><?php echo $role ?></p>
                 </div>
-                <div class="col-3">
+                <div class="col-lg-3 py-1">
                     <p><?php echo $date ?></p>
                 </div>
-                <div class="col-2">
+                <div class="col-2 pt-3">
                     <a class="link open">View</a>
                 </div>
             </div>

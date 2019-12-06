@@ -9,7 +9,7 @@
         <div class="container pt-5">
             <div class="row">
                 <?php foreach ($addresses as $address): ?>
-                    <div class="col py-4">
+                    <div class="col-sm py-4">
                         <div class="address px-3">
                             <?php echo $address['address']?>
                         </div>

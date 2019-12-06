@@ -38,11 +38,11 @@
                     </div>
 
                     <div class="layer h-100 w-100">
-                        <div class="container h-100">
-                            <div class="col-6 h-100">
+                        <div class="container px-lg-5 px-lg-0 h-100">
+                            <div class="col-lg-6 h-100">
                                 <div class="d-flex align-items-center h-100 w-100">
                                     <div>
-                                        <h1 class="heading mb-3"><?php echo $item['title'] ?></h1>
+                                        <h1 class="heading mb-4"><?php echo $item['title'] ?></h1>
                                         <a class="link" href="<?php echo $item['button_link'] ?>"><?php echo $item['button_label'] ?></a>
                                     </div>
                                 </div>

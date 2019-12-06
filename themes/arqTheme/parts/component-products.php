@@ -22,14 +22,14 @@
                     <div class="row product" id="product<?php echo $index ?>">
 
                         <!-- Text -->
-                        <div class="col-6">
+                        <div class="col-lg-6 order-last order-lg-first">
                             <img class="product-img d-block mx-auto" src="<?php echo $image ?>">
                         </div>
 
                         <!-- Image -->
-                        <div class="col-6">
+                        <div class="col-lg-6 order-first order-lg-last">
                             <div class="d-flex align-items-center justify-content-center h-100">
-                                <div class="w-75">
+                                <div class="w-lg-75">
                                     <h3 class="pfdin color-red"><?php echo $title ?></h3>
                                     <p><?php echo $description ?></p>
                                 </div>
@@ -50,9 +50,9 @@
                     <div class="row product" id="product<?php echo $index ?>">
 
                         <!-- Text -->
-                        <div class="col-6">
+                        <div class="col-lg-6">
                             <div class="d-flex align-items-center justify-content-center h-100">
-                                <div class="w-75">
+                                <div class="w-lg-75">
                                     <h3 class="pfdin color-red"><?php echo $title ?></h3>
                                     <p><?php echo $description ?></p>
                                 </div>
@@ -60,7 +60,7 @@
                         </div>
 
                         <!-- Image -->
-                        <div class="col-6">
+                        <div class="col-lg-6">
                             <img class="d-block mx-auto product-img" style="height: 300px" src="<?php echo $image ?>">
                         </div>
                     </div>

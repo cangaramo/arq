@@ -1,10 +1,11 @@
 <?php 
+    $title = $values['title'];
     $articles = $values['articles'];
 ?>
 
-<div class="container my-5 py-5">
+<div class="container my-lg-5 py-5">
 
-    <h2 class="text-center pb-5">News & Media</h2>
+    <h2 class="text-center pb-5"><?php echo $title ?></h2>
 
     <div class="row boxes">
         
@@ -13,7 +14,7 @@
             $permalink = get_the_permalink($article);
             $all_fields = get_fields($article);
         ?>
-            <div class="col-4">
+            <div class="col-lg-4 my-3">
                 <div class="box">
                     <div class="bg-image thumbnail" style="background-image:url('<?php echo $all_fields['image']?>')"></div>
                     <div class="px-3 py-2">

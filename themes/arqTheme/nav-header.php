@@ -37,7 +37,7 @@
             </div>
         </div>
 
-        <div class="w-100 d-block"> 
+        <div class="w-100 d-none d-lg-block"> 
             <div class="d-flex justify-content-end">
 
                 <!-- Logout -->
@@ -157,7 +157,7 @@
                          
                     <?php endforeach ?>
                     
-                    <a class="nav-item nav-link pl-lg-3 search-btn open-search"><img src="<?php echo get_bloginfo('template_url')?>/assets/images/search.png"></a>
+                    <a class="nav-item pl-lg-3 search-btn open-search"><img src="<?php echo get_bloginfo('template_url')?>/assets/images/search.png"></a>
 
                 </div>
             </div>

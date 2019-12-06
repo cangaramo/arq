@@ -8,11 +8,11 @@
 
     <div class="bg-layer">
         <div class="container more-padding-top" >
-            <div class="row py-5 mt-5 mb-4">
+            <div class="row py-5 mt-5 mb-4 px-3 px-lg-0">
 
                 <?php foreach ($numbers as $number): ?>
 
-                    <div class="col num">
+                    <div class="col-sm num my-3">
                         <div class="w-100">
                             <span><?php echo $number['symbol'] ?></span><span class="counter"><?php echo $number['number'] ?></span><span><?php echo $number['value'] ?></span>
                             <p class="label"><?php echo $number['label'] ?></p>

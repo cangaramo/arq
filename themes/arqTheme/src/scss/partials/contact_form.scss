@@ -11,7 +11,11 @@
     }
     
     #field_1_3 {
-        height: 50px;
+
+        @media (min-width: 640px){
+            height: 50px;
+        }
+        
     }
 
     textarea {

@@ -1,0 +1,67 @@
+@import 'variables.scss';
+
+.login-page {
+
+    h2 {
+        font-weight: 500;
+    }
+
+    #loginform {
+
+        font-family: $pfdin !important;
+
+        label {
+            display: block;
+            padding-top: 8px;
+            font-weight: 500;
+        }
+
+        input[type="text"], input[type="password"]{
+            width: 100%;
+            background: white !important;
+            border: 1px solid white;
+            padding: 4px 6px;
+            border-radius: 3px;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        input:-webkit-autofill {
+            -webkit-box-shadow:0 0 0 50px white inset;
+            -webkit-text-fill-color: #333;
+            font-family: $pfdin !important;
+        }
+        
+        input:-webkit-autofill:focus {
+            -webkit-box-shadow: 0 0 0 50px white inset;
+            -webkit-text-fill-color: #333;
+            font-family: $pfdin !important;
+        } 
+        
+        input[type="submit"]{
+            margin-top: 20px;
+            background: $red;
+            color: white !important;
+            padding: 6px 20px;
+            color: white;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-family: $roboto;
+            cursor: pointer;
+        
+            &:hover{
+                text-decoration: none;
+                color: white;
+                background: #9e0317;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+}
+
+

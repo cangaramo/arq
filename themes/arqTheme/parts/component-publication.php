@@ -34,12 +34,13 @@
     <?php endif ?>
 
     <!-- Publication -->
-    <div class="container py-5">
+    <div class="container py-5 publication">
 
         <div class="row py-lg-5">
 
             <div class="col-lg-6">
-                <img class="w-100" src="<?php echo $image?>">
+                <div id="trigger-move-img"></div>
+                <img id="move-img" class="w-100 move-img" src="<?php echo $image?>">
             </div>
 
             <div class="col-lg-6">

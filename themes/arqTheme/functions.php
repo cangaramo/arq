@@ -16,7 +16,9 @@ function enqueue_theme_scripts() {
 	wp_enqueue_style( 'fontawesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css');
 	wp_enqueue_style( 'bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
 	wp_enqueue_style( 'font-roboto', 'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&display=swap');
-	wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/min/styles.min.css', '', '1.1'); // Register the compiled stylesheets
+	wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/min/styles.min.css', '', '1.1');
+	wp_enqueue_style( 'slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css');
+	wp_enqueue_style( 'slick-theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css');
 
 	//JS
 	wp_deregister_script( 'jquery' );
@@ -24,11 +26,13 @@ function enqueue_theme_scripts() {
 	wp_register_script('popper-js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', array('jquery'));
 	wp_register_script('bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', array('jquery'));
 	wp_register_script('main-js', get_template_directory_uri() . '/assets/js/min/scripts.min.js', array('jquery'), '1.2');
+	wp_register_script('slick-js', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array('jquery'));
 
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('popper-js');
 	wp_enqueue_script('bootstrap-js');
 	wp_enqueue_script('main-js');
+	wp_enqueue_script('slick-js');
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_theme_scripts' );
 
@@ -102,59 +106,7 @@ add_action( 'wp_ajax_load_updates', 'load_updates' );
 
 
 /* Load news and media */
-function load_news(){
-
-	$current_page = $_POST['current_page'];
-
-	$args = array(
-		'post_type' => 'news',
-		'posts_per_page' => 3,
-		'paged' => $current_page
-	);
-	$news = get_posts($args);
-
-	?>
-
-		<div class="row news">
-
-			<?php foreach ($news as $index=>$article): 
-				$article_id = $article->ID;
-				$article_date = get_the_date('F j, Y', $article_id);
-				$article_title = get_the_title($article_id);
-				$article_fields = get_fields($article_id);
-
-				if (  ($index+1)%3 == 0){
-					$class_col = 'col-lg-12';
-					$class_big = 'big';
-				}
-				else {
-					$class_col = 'col-lg-6';
-					$class_big = '';
-				}
-				?>
-
-				<div class="<?php echo $class_col ?> my-3">
-					<div class="box <?php echo $class_big ?>">
-						<div class="bg-image thumbnail" style="background-image:url('<?php echo $article_fields['image']?>')"></div>
-						<div class="px-3 py-2">
-							<h4 class="my-3"><?php echo $article_title ?></h4>
-							<p class="date"><?php echo $article_date ?></p>
-							<div class="absolute-link">
-								<a class="link">More</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			<?php endforeach ?>
-
-		</div>
-
-
-	<?php
-	die();
-}
-
+require 'functions/function-load_news.php';
 add_action( 'wp_ajax_nopriv_load_news', 'load_news' );
 add_action( 'wp_ajax_load_news', 'load_news' );
 

@@ -16,7 +16,7 @@
         ?>
             <div class="col-lg-4 my-3">
                 <div class="box">
-                    <div class="bg-image thumbnail" style="background-image:url('<?php echo $all_fields['image']?>')"></div>
+                    <div class="overflow-hidden" onClick="redirectTo('<?php echo $permalink ?>')"><div class="bg-image thumbnail" style="background-image:url('<?php echo $all_fields['image']?>')"></div></div>
                     <div class="px-3 py-2">
                         <?php if ($title): ?>
                             <h3 class="my-3"><?php echo $title ?></h3>

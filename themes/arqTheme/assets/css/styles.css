@@ -293,14 +293,30 @@ footer {
   height: 400px;
   background: white; }
   .boxes .box .thumbnail {
-    height: 150px; }
+    height: 150px;
+    transition: transform 0.5s;
+    transform: scale(1);
+    -webkit-transform: scale(1); }
+    .boxes .box .thumbnail:hover {
+      transition: transform 0.5s;
+      transform: scale(1.15);
+      -webkit-transform: scale(1.15);
+      cursor: pointer; }
 
 .long-boxes .box {
   box-shadow: 1px 2px 20px 2px rgba(0, 0, 0, 0.28);
   height: 570px;
   background: white; }
   .long-boxes .box .thumbnail {
-    height: 170px; }
+    height: 170px;
+    transition: transform 0.5s;
+    transform: scale(1);
+    -webkit-transform: scale(1); }
+    .long-boxes .box .thumbnail:hover {
+      transition: transform 0.5s;
+      transform: scale(1.15);
+      -webkit-transform: scale(1.15);
+      cursor: pointer; }
 
 .documents .box {
   box-shadow: 1px 2px 20px 2px rgba(0, 0, 0, 0.28);
@@ -321,7 +337,15 @@ footer {
   position: relative;
   animation: goUp 0.55s ease-in-out forwards; }
   .news .box .thumbnail {
-    height: 200px; }
+    height: 200px;
+    transition: transform 0.5s;
+    transform: scale(1);
+    -webkit-transform: scale(1); }
+    .news .box .thumbnail:hover {
+      transition: transform 0.5s;
+      transform: scale(1.15);
+      -webkit-transform: scale(1.15);
+      cursor: pointer; }
   .news .box .date {
     color: #585858; }
 
@@ -550,9 +574,20 @@ header {
     outline: #C30019 auto 3px; }
 
 .gform_wrapper input {
-  padding: 6px !important; }
+  padding: 6px !important;
+  border: none !important; }
   .gform_wrapper input:focus {
     outline: #C30019 auto 3px; }
+
+.gform_wrapper input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px white inset;
+  -webkit-text-fill-color: #333;
+  font-family: PF-Din !important; }
+
+.gform_wrapper input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 50px white inset;
+  -webkit-text-fill-color: #333;
+  font-family: PF-Din !important; }
 
 .gform_wrapper ::-webkit-input-placeholder {
   text-transform: uppercase;
@@ -761,6 +796,9 @@ header {
 #updates-response .next-btn {
   background-image: url(../../../assets/images/next-page-white.png); }
 
+.video-box {
+  height: 650px; }
+
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -853,6 +891,35 @@ header {
   width: 100%;
   color: white !important; }
 
+.publication .move-img {
+  position: relative; }
+
+/* Colours */
+/* Font */
+@font-face {
+  font-family: PF-Din;
+  src: url("../../fonts/PFDin-Bold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: PF-Din;
+  src: url("../../fonts/PFDin-Medium.otf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: PF-Din;
+  src: url("../../fonts/PFDin-Regular.otf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: PF-Din;
+  src: url("../../fonts/PFDin-Light.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
 .login-page h2 {
   font-weight: 500; }
 
@@ -894,3 +961,39 @@ header {
       background: #9e0317; }
     .login-page #loginform input[type="submit"]:focus {
       outline: none; }
+
+.leadership .person {
+  height: 350px;
+  border: 1px solid grey; }
+  .leadership .person .img-person {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%; }
+
+.leadership .slick-prev, .leadership .slick-next {
+  background: transparent;
+  color: white; }
+
+.leadership .slick-prev {
+  background-image: url("../../images/arrow-prev-grey.png") !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 55px;
+  width: 60px; }
+  .leadership .slick-prev:before {
+    content: none; }
+  .leadership .slick-prev:hover, .leadership .slick-prev:focus {
+    background-image: url("../../images/arrow-prev-grey.png") !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 55px;
+    width: 60px; }
+
+.leadership .slick-next {
+  background-image: url("../../images/arrow-next-grey.png") !important;
+  background-size: 100%; }
+  .leadership .slick-next:before {
+    content: none; }
+  .leadership .slick-next:hover {
+    background-image: url("../../images/arrow-next-grey.png") !important;
+    background-size: 100%; }

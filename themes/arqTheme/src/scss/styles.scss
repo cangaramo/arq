@@ -351,69 +351,73 @@ footer {
     color: white !important;
 }
 
-.login-page {
 
-    h2 {
-        font-weight: 500;
+.publication {
+
+    .move-img {
+        position: relative;
     }
+}
 
-    #loginform {
+@import 'partials/login.scss';
 
-        font-family: $pfdin !important;
 
-        label {
-            display: block;
-            padding-top: 8px;
-            font-weight: 500;
-        }
+.leadership {
 
-        input[type="text"], input[type="password"]{
-            width: 100%;
-            background: white !important;
-            border: 1px solid white;
-            padding: 4px 6px;
-            border-radius: 3px;
+    .person {
+        height: 350px;
+        border: 1px solid grey;
 
-            &:focus {
-                outline: none;
-            }
-        }
-
-        input:-webkit-autofill {
-            -webkit-box-shadow:0 0 0 50px white inset;
-            -webkit-text-fill-color: #333;
-            font-family: $pfdin !important;
-        }
-        
-        input:-webkit-autofill:focus {
-            -webkit-box-shadow: 0 0 0 50px white inset;
-            -webkit-text-fill-color: #333;
-            font-family: $pfdin !important;
-        } 
-        
-    
-        input[type="submit"]{
-            margin-top: 20px;
-            background: $red;
-            color: white !important;
-            padding: 6px 20px;
-            color: white;
-            text-transform: uppercase;
-            font-size: 12px;
-            font-family: $roboto;
-            cursor: pointer;
-        
-            &:hover{
-                text-decoration: none;
-                color: white;
-                background: #9e0317;
-            }
-
-            &:focus {
-                outline: none;
-            }
+        .img-person {
+            height: 140px;
+            width: 140px;
+            border-radius: 50%;
         }
     }
 }
 
 
+//Slick
+
+.leadership {
+
+
+    .slick-prev, .slick-next {
+        background: transparent;
+        color: white;
+    }
+
+    .slick-prev{
+        background-image: url('../../images/arrow-prev-grey.png') !important;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 55px;
+        width: 60px;
+        
+        &:before {
+            content: none;
+        }
+
+        &:hover, &:focus  {
+            background-image: url('../../images/arrow-prev-grey.png') !important;
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 55px;
+            width: 60px;
+        }
+    }
+
+    .slick-next{
+        background-image: url('../../images/arrow-next-grey.png') !important;
+        background-size: 100%;
+        
+        &:before {
+            content: none;
+        }
+
+        &:hover {
+            background-image: url('../../images/arrow-next-grey.png') !important;
+            background-size: 100%;
+        }
+    }
+}

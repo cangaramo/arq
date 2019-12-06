@@ -11,7 +11,7 @@
 
         <h2 class="mb-5">Vacancies</h2>
 
-        <div class="row labels pb-4 d-none d-lg-block">
+        <div class="row labels pb-4 d-none d-lg-flex">
             <div class="col-4">
                 <p>Job title</p>
             </div>

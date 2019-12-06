@@ -28,11 +28,24 @@
 
     input {
         padding: 6px !important;
+        border: none !important;
 
         &:focus {
             outline: $red auto 3px;
         }
     }
+
+    input:-webkit-autofill {
+        -webkit-box-shadow:0 0 0 50px white inset;
+        -webkit-text-fill-color: #333;
+        font-family: $pfdin !important;
+    }
+    
+    input:-webkit-autofill:focus {
+        -webkit-box-shadow: 0 0 0 50px white inset;
+        -webkit-text-fill-color: #333;
+        font-family: $pfdin !important;
+    } 
 
     ::-webkit-input-placeholder { 
         text-transform: uppercase;

@@ -5,6 +5,15 @@
 
 <footer >
 
+    <div class="bg-ligth_gray">
+        <div class="container py-5">
+            <div class="d-md-flex align-items-center justify-content-center">
+                <p class="signup">Sign up for updates</p>
+                <div class="ml-md-4"><?php echo gravity_form( 2, false, false, false, '', true ); ?></div>
+            </div>
+        </div>
+    </div>
+
     <div class="bg-black">
         <div class="container pt-5">
             <div class="row">

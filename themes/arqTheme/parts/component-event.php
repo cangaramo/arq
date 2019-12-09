@@ -14,7 +14,7 @@
                 <div class="more-padding-top">
                     <h2><?php echo $event_title ?></h2>
                     <div class="my-4"><?php echo $event_fields['description'] ?></div>
-                    <a class="link-white" href="<?php echo $event_permalink ?>">More</a>
+                    <a class="link" href="<?php echo $event_permalink ?>">More</a>
                 </div>
             </div>
         </div>

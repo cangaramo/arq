@@ -12,15 +12,55 @@ $( document ).ready(function() {
     });
 
 
-    //Slick
-    $('.multiple-items').slick({
+    /* SLIDERS */
+
+    //Load sliders
+    $('.board-members').slick({
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
         arrows: true,
-        dots: true
+        dots: true,
+        draggable: false
     });
-              
+
+    $('.management-team').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        arrows: true,
+        dots: true,
+        draggable: false
+    });
+
+    //Hide management
+    $('#management-slider').hide();
+
+    //Change slider
+    $( ".open-slider" ).click(function() {
+
+        slider = $(this).data("slider");
+
+        if (slider == "board") {
+            $('#management-slider').hide();
+            $('.board-members').slick('refresh');
+            $('#board-slider').show();
+            
+            $('.open-slider').removeClass("active");
+            $(this).addClass("active");
+
+        }
+        else if (slider == "management") {
+            $('#board-slider').hide();
+            $('.management-team').slick('refresh');
+            $('#management-slider').show();
+
+            $('.open-slider').removeClass("active");
+            $(this).addClass("active");        
+        }
+       
+    });
+
 
     /* Animations */
 

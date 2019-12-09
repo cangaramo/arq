@@ -136,6 +136,9 @@ a {
 .bg-black {
   background: black; }
 
+.bg-red {
+  background: #C30019; }
+
 .color-white {
   color: white; }
 
@@ -147,6 +150,11 @@ a {
 
 strong {
   font-weight: 600; }
+
+.breadcrumbs {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 15px; }
 
 .red-line {
   margin-top: 0;
@@ -208,6 +216,8 @@ strong {
     text-decoration: none;
     color: white;
     background: #9e0317; }
+  .link:focus {
+    outline: none; }
 
 .link-white {
   background: white;
@@ -226,12 +236,12 @@ strong {
     padding: 130px 0; } }
 
 footer {
-  color: white;
   position: relative;
   z-index: 2; }
   footer .address {
     border-left: 1px solid white;
-    height: 130px; }
+    height: 130px;
+    color: white; }
   footer p {
     margin-bottom: 0;
     font-size: 14px; }
@@ -963,11 +973,10 @@ header {
       outline: none; }
 
 .leadership .person {
-  height: 350px;
-  border: 1px solid grey; }
+  height: 350px; }
   .leadership .person .img-person {
-    height: 140px;
-    width: 140px;
+    height: 120px;
+    width: 120px;
     border-radius: 50%; }
 
 .leadership .slick-prev, .leadership .slick-next {
@@ -978,22 +987,97 @@ header {
   background-image: url("../../images/arrow-prev-grey.png") !important;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 55px;
-  width: 60px; }
+  height: 40px;
+  width: 30px;
+  left: -45px; }
   .leadership .slick-prev:before {
     content: none; }
   .leadership .slick-prev:hover, .leadership .slick-prev:focus {
     background-image: url("../../images/arrow-prev-grey.png") !important;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 55px;
-    width: 60px; }
+    height: 40px;
+    width: 30px;
+    left: -40px; }
 
 .leadership .slick-next {
   background-image: url("../../images/arrow-next-grey.png") !important;
-  background-size: 100%; }
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 30px;
+  right: -40px; }
   .leadership .slick-next:before {
     content: none; }
-  .leadership .slick-next:hover {
+  .leadership .slick-next:hover, .leadership .slick-next:focus {
     background-image: url("../../images/arrow-next-grey.png") !important;
-    background-size: 100%; }
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 30px; }
+
+.leadership .open-slider {
+  width: 350px;
+  text-align: center;
+  background: #F5F5F5;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px; }
+  .leadership .open-slider:hover {
+    background: rgba(0, 0, 0, 0.85);
+    color: white !important; }
+
+.leadership .open-slider.active {
+  background: #585858;
+  color: white; }
+
+.leadership .slick-dots li {
+  margin: 0 3px; }
+  .leadership .slick-dots li button {
+    height: 30px; }
+    .leadership .slick-dots li button::before {
+      content: '_';
+      font-size: 30px;
+      font-weight: 700; }
+
+footer .signup {
+  font-weight: 400;
+  font-size: 20px; }
+
+@media (min-width: 768px) {
+  footer form {
+    display: flex; } }
+
+@media (min-width: 768px) {
+  footer form .gform_body {
+    margin-right: 15px; } }
+
+footer form .gform_body ul.gform_fields li.gfield {
+  margin: 0 !important;
+  padding: 0 !important; }
+  footer form .gform_body ul.gform_fields li.gfield .ginput_container {
+    margin: 0 !important; }
+    @media (min-width: 768px) {
+      footer form .gform_body ul.gform_fields li.gfield .ginput_container {
+        width: 290px !important; } }
+    footer form .gform_body ul.gform_fields li.gfield .ginput_container input {
+      width: 100%;
+      margin-bottom: 20px; }
+      @media (min-width: 768px) {
+        footer form .gform_body ul.gform_fields li.gfield .ginput_container input {
+          margin-bottom: 0; } }
+      footer form .gform_body ul.gform_fields li.gfield .ginput_container input::placeholder {
+        text-transform: none;
+        font-size: 16px; }
+
+footer form .gform_footer {
+  margin: 0 !important;
+  padding: 0 !important; }
+  footer form .gform_footer input[type=submit] {
+    padding: 7px 20px 7px 20px !important; }
+    footer form .gform_footer input[type=submit]:focus {
+      outline: none; }
+
+img.gform_ajax_spinner {
+  display: none !important; }

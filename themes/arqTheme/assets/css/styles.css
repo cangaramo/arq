@@ -1081,3 +1081,17 @@ footer form .gform_footer {
 
 img.gform_ajax_spinner {
   display: none !important; }
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 800px; } }
+
+.modal-dialog .modal-content {
+  border: none;
+  border-radius: 0;
+  box-shadow: none; }
+  .modal-dialog .modal-content .modal-header {
+    border: none !important; }
+  .modal-dialog .modal-content .role {
+    color: #585858;
+    font-size: 17px; }

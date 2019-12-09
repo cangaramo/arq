@@ -34,6 +34,7 @@
                     $role = get_field('role', $person_id);
                     $short_bio = get_field('short_bio', $person_id);
                     $image = get_field('image', $person_id);
+                    $bio = get_field('bio', $person_id);
                 ?>
 
                     <div class="person px-3">
@@ -42,7 +43,8 @@
                         <p><strong><?php echo $role ?></strong></p>
                         <p><?php echo $short_bio ?></p>
                         <div class="absolute-link">
-                            <a class="link" href="#">More</a>
+                            <a class="link open-person" 
+                            data-bio="<?php echo $bio?>" data-image="<?php echo $image?>" data-title="<?php echo $title?>" data-role="<?php echo $role?>">More</a>
                         </div>
                     </div>
 
@@ -60,6 +62,7 @@
                     $role = get_field('role', $person_id);
                     $short_bio = get_field('short_bio', $person_id);
                     $image = get_field('image', $person_id);
+                    $bio = get_field('bio', $person_id);
                 ?>
 
                     <div class="person px-3">
@@ -68,7 +71,8 @@
                         <p><strong><?php echo $role ?></strong></p>
                         <p><?php echo $short_bio ?></p>
                         <div class="absolute-link">
-                            <a class="link" href="#">More</a>
+                            <a class="link open-person" 
+                            data-bio="<?php echo $bio?>" data-image="<?php echo $image?>" data-title="<?php echo $title?>" data-role="<?php echo $role?>">More</a>
                         </div>
                     </div>
 
@@ -80,3 +84,5 @@
     </div>
 
 </div>
+
+

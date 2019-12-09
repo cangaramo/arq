@@ -275,7 +275,19 @@ $( document ).ready(function() {
 
     });
 
+    $('body').on('click', '.open-person', function(){
+       
+        bio = $(this).data("bio");
+        image = $(this).data("image");
+        title = $(this).data("title");
+        role = $(this).data("role");
 
+        $('#modalPerson .bio').html(bio);
+        $('#modalPerson .image').attr("src", image);
+        $('#modalPerson .role').text(role);
+        $('#modalPerson .title').text(title);
+        $('#modalPerson').modal('show');
+    });
 
 });
 

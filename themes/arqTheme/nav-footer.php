@@ -30,3 +30,31 @@
     </div>
 
 </footer>
+
+<!-- Modal -->
+<div class="modal fade" id="modalPerson" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header d-block pb-0">
+                <a data-dismiss="modal" href="" class="float-right"><img height="20" src="<?php echo get_bloginfo('template_url')?>/assets/images/close.png"></a>
+            </div>
+
+            <div class="modal-body pt-0 pb-4">
+                <div class="row">
+                    <div class="col-4 pr-4">
+                        <img class="image w-100">
+                    </div>
+                    <div class="col-8">
+                        <h2 class="title color-red"></h2>
+                        <p class="role mb-4">Role</p>
+                        <div class="bio"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

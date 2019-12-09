@@ -546,3 +546,28 @@ footer {
 img.gform_ajax_spinner {
     display: none !important;
 }
+
+
+
+.modal-dialog {
+
+    @media (min-width: 576px){
+        max-width: 800px;
+    }
+
+    .modal-content {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+
+        .modal-header {
+            border: none !important;
+        }
+
+        .role {
+            color: $dark_gray;
+            font-size: 17px;
+        }
+    }
+
+}

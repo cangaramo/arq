@@ -38,7 +38,7 @@ function load_news(){
                             <h4 class="my-3"><?php echo $article_title ?></h4>
                             <p class="date"><?php echo $article_date ?></p>
                             <div class="absolute-link">
-                                <a class="link">More</a>
+                                <a class="link" href="<?php echo $article_link ?>">More</a>
                             </div>
                         </div>
                     </div>

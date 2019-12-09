@@ -23,7 +23,7 @@
         <a class="open-slider mx-1 py-2" data-slider="management">Management team</a>
     </div>
 
-    <div class="my-4">
+    <div class="my-4 mx-5">
 
         <div id="board-slider">
             <div class="board-members py-5">
@@ -37,7 +37,7 @@
                     $bio = get_field('bio', $person_id);
                 ?>
 
-                    <div class="person px-3">
+                    <div class="person px-md-3">
                         <div class="img-person bg-image" style="background-image:url('<?php echo $image ?>')"></div>
                         <h4 class="mt-3 mb-1"><?php echo $title ?></h4>
                         <p><strong><?php echo $role ?></strong></p>
@@ -65,7 +65,7 @@
                     $bio = get_field('bio', $person_id);
                 ?>
 
-                    <div class="person px-3">
+                    <div class="person px-md-3">
                         <div class="img-person bg-image" style="background-image:url('<?php echo $image ?>')"></div>
                         <h4 class="mt-3 mb-1"><?php echo $title ?></h4>
                         <p><strong><?php echo $role ?></strong></p>

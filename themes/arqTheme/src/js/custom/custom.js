@@ -21,7 +21,23 @@ $( document ).ready(function() {
         slidesToScroll: 3,
         arrows: true,
         dots: true,
-        draggable: false
+        draggable: false,
+        responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
     });
 
     $('.management-team').slick({
@@ -30,7 +46,23 @@ $( document ).ready(function() {
         slidesToScroll: 3,
         arrows: true,
         dots: true,
-        draggable: false
+        draggable: false,
+        responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+        ]
     });
 
     //Hide management

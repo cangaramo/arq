@@ -13,7 +13,7 @@
     <hr class="red-line">
 
     <div class="container pt-4">
-        <p class="breadcrumbs"><span class="mr-2">> </span><a href="/news-media">News & Media </a><span class="color-red mx-2">></span> <?php echo $title ?> </p>
+        <p class="breadcrumbs"><span class="mr-2">> </span><a href="/responsibility">Responsibility articles </a><span class="color-red mx-2">></span> <?php echo $title ?> </p>
     </div>
 
     <!-- Title and copy -->
@@ -74,13 +74,11 @@
 
     <?php endif; ?>
 
-
     <!-- Event -->
     <?php 
     $event_title = get_the_title($event_id);
     $event_fields = get_fields($event_id);
-    $event_permalink = get_the_permalink($event_id);
-    ?>
+    $event_permalink = get_the_permalink($event_id); ?>
 
     <?php if ($event_id): ?>
 
@@ -109,7 +107,7 @@
             <img class="w-100 d-block d-md-none" src="<?php echo $event_fields['image'] ?>">
 
         </div>
-        
+    
     <?php endif ?>
 
 </main>

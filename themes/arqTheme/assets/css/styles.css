@@ -196,6 +196,7 @@ strong {
     display: none; }
     @media (min-width: 992px) {
       #carouselHome .carousel-control-next-icon {
+        display: block;
         background-image: url("../../images/arrow-next.png"); } }
   #carouselHome .carousel-control-next-icon, #carouselHome .carousel-control-prev-icon {
     width: 28px;
@@ -340,14 +341,14 @@ footer {
 
 .news .box {
   box-shadow: 1px 2px 20px 2px rgba(0, 0, 0, 0.28);
-  height: 350px;
+  height: 380px;
   background: white;
   opacity: 0;
   top: 30px;
   position: relative;
   animation: goUp 0.55s ease-in-out forwards; }
   .news .box .thumbnail {
-    height: 200px;
+    height: 180px;
     transition: transform 0.5s;
     transform: scale(1);
     -webkit-transform: scale(1); }
@@ -362,7 +363,7 @@ footer {
 .news .big {
   height: 400px; }
   .news .big .thumbnail {
-    height: 230px; }
+    height: 210px; }
 
 @keyframes goUp {
   from {
@@ -1095,3 +1096,9 @@ img.gform_ajax_spinner {
   .modal-dialog .modal-content .role {
     color: #585858;
     font-size: 17px; }
+
+#audio-player:focus {
+  outline: none; }
+
+.close-audio {
+  cursor: pointer; }

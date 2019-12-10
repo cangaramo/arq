@@ -13,12 +13,18 @@
     }
 ?>
 
-<div class="bg-image banner position-relative" style="background:<?php echo $bg ?>">
-    <div class="layer h-100 w-100">
-        <div class="container h-100">
-            <div class="d-flex h-100 align-items-center">
-                <h1><?php echo $title ?></h1>
+<?php if ($background == "Solid colour"): ?>
+    <div class="banner position-relative" style="background:<?php echo $bg ?>">
+<?php else: ?>
+    <div class="bg-image banner position-relative" style="background-image:<?php echo $bg ?>">
+<?php endif ?>
+
+        <div class="layer h-100 w-100">
+            <div class="container h-100">
+                <div class="d-flex h-100 align-items-center">
+                    <h1><?php echo $title ?></h1>
+                </div>
             </div>
         </div>
-    </div>
+
 </div> 

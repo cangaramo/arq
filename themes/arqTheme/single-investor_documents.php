@@ -13,7 +13,7 @@
     <hr class="red-line">
 
     <div class="container pt-4">
-        <p class="breadcrumbs"><span class="mr-2">> </span><a href="/news-media">News & Media </a><span class="color-red mx-2">></span> <?php echo $title ?> </p>
+        <p class="breadcrumbs"><span class="mr-2">> </span><a href="/arq-investor-area">Investor area </a><span class="color-red mx-2">></span> <?php echo $title ?> </p>
     </div>
 
     <!-- Title and copy -->
@@ -21,12 +21,20 @@
 
         <div class="row">
 
-            <div class="col-lg-5 mb-4">
+            <div class="col-lg-6 mb-4 pr-lg-5">
                 <h2><?php echo $title ?></h2>
-                <img class="w-100 mt-4" src="<?php echo $all_fields['image'] ?>">
+
+                <?php if ($all_fields['image']): ?>
+                    <img class="w-100 mt-4" src="<?php echo $all_fields['image'] ?>">
+
+                <?php elseif ($all_fields['vimeo_id']): ?>
+                    <div class='embed-container mt-4'>
+                        <iframe src='https://player.vimeo.com/video/<?php echo $all_fields['vimeo_id']?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                    </div>
+                <?php endif ?>
             </div>
 
-            <div class="col-lg-6 offset-lg-1">
+            <div class="col-lg-6 pl-lg-4">
                 <?php echo $all_fields['copy'] ?>
             </div>
 
@@ -74,13 +82,11 @@
 
     <?php endif; ?>
 
-
     <!-- Event -->
     <?php 
     $event_title = get_the_title($event_id);
     $event_fields = get_fields($event_id);
-    $event_permalink = get_the_permalink($event_id);
-    ?>
+    $event_permalink = get_the_permalink($event_id); ?>
 
     <?php if ($event_id): ?>
 
@@ -109,7 +115,7 @@
             <img class="w-100 d-block d-md-none" src="<?php echo $event_fields['image'] ?>">
 
         </div>
-        
+    
     <?php endif ?>
 
 </main>

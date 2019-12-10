@@ -307,6 +307,7 @@ $( document ).ready(function() {
 
     });
 
+    /* Open modal person */
     $('body').on('click', '.open-person', function(){
        
         bio = $(this).data("bio");
@@ -319,6 +320,27 @@ $( document ).ready(function() {
         $('#modalPerson .role').text(role);
         $('#modalPerson .title').text(title);
         $('#modalPerson').modal('show');
+    });
+
+    /* Play audio */
+    $('body').on('click', '.play-audio', function(){
+
+        audio = $(this).data("audio");
+        $('#audio-player source').attr("src", audio);
+        document.getElementById('audio-player').load();
+
+        $('#audio-player-cont').fadeIn("fast", function(){
+           
+            document.getElementById('audio-player').play();
+        });
+        
+    });
+
+    /* Close audio */
+    $('body').on('click', '.close-audio', function(){
+
+        document.getElementById('audio-player').pause();
+        $('#audio-player-cont').fadeOut("fast");
     });
 
 });

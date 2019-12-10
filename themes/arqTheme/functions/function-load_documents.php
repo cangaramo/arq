@@ -29,26 +29,36 @@ function load_documents() {
                 case 'Financial':
                     $icon = get_bloginfo('template_url') . '/assets/images/financial.png';
                     $label = "Read";
+                    $link = $permalink;
                 break;
                 case 'Investor':
                     $icon = get_bloginfo('template_url') . '/assets/images/investor.png';
                     $label = "Download";
+                    $file = get_field('file', $document_id);
+                    $link = $file;
+                    $target = "_blank";
                 break;
                 case 'Film':
                     $icon = get_bloginfo('template_url') . '/assets/images/film.png';
                     $label = "Play";
+                    $link = $permalink;
                 break;
                 case 'Audio':
                     $icon = get_bloginfo('template_url') . '/assets/images/audio.png';
                     $label = "Listen";
+                    $link = $permalink;
                 break;
                 case 'Article':
                     $icon = get_bloginfo('template_url') . '/assets/images/article.png';
                     $label = "Read";
+                    $link = $permalink;
                 break;
                 case 'PDF':
                     $icon = get_bloginfo('template_url') . '/assets/images/pdf.png';
                     $label = "Download";
+                    $file = get_field('file', $document_id);
+                    $link = $file;
+                    $target = "_blank";
                 break;
             }
         ?>
@@ -60,7 +70,7 @@ function load_documents() {
                     <p class="mb-1"><?php echo $date ?></p>
                     <p><?php echo $description ?></p>
                     <div class="absolute-link">
-                        <a class="link" href="<?php echo $permalink ?>"><?php echo $label ?></a>
+                        <a class="link" target="<?php echo $target ?>" href="<?php echo $link ?>"><?php echo $label ?></a>
                     </div>
                 </div>
             </div>

@@ -20,8 +20,8 @@ function load_updates(){
 		<?php foreach ($updates as $update):
 			$update_id = $update->ID;
 			$title = get_the_title($update_id);
-			$date = get_field('date', $update_id);
-			$permalink = get_the_permalink($update_id);
+            $date = get_field('date', $update_id);
+            $audio = get_field('audio', $update_id);
 			$icon = get_bloginfo('template_url') . '/assets/images/audio.png';
 		?>
 
@@ -35,7 +35,7 @@ function load_updates(){
 
 					<p class="mb-1"><?php echo $date ?></p>
 					<div class="absolute-link">
-						<a class="link" href="<?php echo $permalink ?>">Listen</a>
+						<a class="link play-audio" data-audio="<?php echo $audio ?>">Listen</a>
 					</div>
 
 				</div>

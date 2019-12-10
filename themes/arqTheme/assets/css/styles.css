@@ -91,40 +91,39 @@ h1.heading {
       font-size: 55px;
       line-height: 55px; } }
 
+/* Colours */
+/* Font */
+@font-face {
+  font-family: PF-Din;
+  src: url("../../fonts/PFDin-Bold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: PF-Din;
+  src: url("../../fonts/PFDin-Medium.otf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: PF-Din;
+  src: url("../../fonts/PFDin-Regular.otf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: PF-Din;
+  src: url("../../fonts/PFDin-Light.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+/* Hyperlinks, backgrounds and colors */
 a {
   color: rgba(0, 0, 0, 0.85); }
   a:hover {
     color: #C30019;
     text-decoration: none; }
 
-.bg-image {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
-
-.layer {
-  position: absolute;
-  top: 0;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.15); }
-
-.bg-layer {
-  background: rgba(0, 0, 0, 0.2); }
-
-.absolute-top {
-  position: absolute;
-  top: 0; }
-
-.absolute-bottom {
-  position: absolute;
-  bottom: 0; }
-
-.absolute-link {
-  position: absolute;
-  bottom: 20px;
-  color: white; }
-
-/* Backgrounds */
 .bg-whitesmoke {
   background: #F5F5F5; }
 
@@ -140,7 +139,6 @@ a {
 .bg-red {
   background: #C30019; }
 
-/* Colors */
 .color-white {
   color: white; }
 
@@ -203,6 +201,33 @@ strong {
     text-decoration: none;
     color: white;
     background: rgba(0, 0, 0, 0.85); }
+
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.layer {
+  position: absolute;
+  top: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.15); }
+
+.bg-layer {
+  background: rgba(0, 0, 0, 0.2); }
+
+.absolute-top {
+  position: absolute;
+  top: 0; }
+
+.absolute-bottom {
+  position: absolute;
+  bottom: 0; }
+
+.absolute-link {
+  position: absolute;
+  bottom: 20px;
+  color: white; }
 
 @media (min-width: 992px) {
   .w-lg-75 {
@@ -697,7 +722,11 @@ header {
     color: #BCBCBC; }
   .search-box .results-container .result {
     color: rgba(0, 0, 0, 0.85);
-    padding: 6px 0; }
+    padding: 6px 0;
+    font-size: 18px; }
+    @media (min-width: 992px) {
+      .search-box .results-container .result {
+        font-size: 16px; } }
     .search-box .results-container .result:hover {
       text-decoration: none;
       opacity: 0.7;

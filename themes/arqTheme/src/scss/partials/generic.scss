@@ -1,0 +1,114 @@
+@import 'variables.scss';
+
+/* Hyperlinks, backgrounds and colors */
+
+a {
+    color: $black;
+
+    &:hover {
+        color: $red;
+        text-decoration: none;
+    }
+}
+
+.bg-whitesmoke {
+    background: $whitesmoke;
+}
+
+.bg-ligth_gray {
+    background: $ligth_gray;
+}
+
+.bg-dark_gray {
+    background: $dark_gray;
+}
+
+.bg-black {
+    background: black;
+}
+
+.bg-red {
+    background: $red;
+}
+
+.color-white {
+    color: white;
+}
+
+.color-red {
+    color: $red;
+}
+
+.align-icon {
+    vertical-align: sub;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.breadcrumbs {
+    font-family: $roboto;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.red-line {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    border-top: 2px solid $red;
+}
+
+.white-line {
+    margin-top: 0;
+    margin-bottom: 0;
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.5);
+}
+
+.download {
+    color: $black;
+
+    &:hover {
+        color: $red;
+        text-decoration: none;
+    }
+}
+
+
+.link {
+    background: $red;
+    color: white !important;
+    padding: 6px 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: $roboto;
+    cursor: pointer;
+
+    &:hover{
+        text-decoration: none;
+        color: white;
+        background: #9e0317;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.link-white {
+    background: white;
+    color: $black;
+    padding: 6px 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: $roboto;
+
+    &:hover{
+        text-decoration: none;
+        color: white;
+        background: $black;
+    }
+}

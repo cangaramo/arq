@@ -7,12 +7,12 @@
         $logged_in = true;
     else:
         $logged_in = false;
-    endif;               
+    endif;    
 ?>
 
-<header>
+<header class="position-relative" style="background: transparent">
 
-    <div class="container">
+    <div class="container" style="z-index: 3;position: relative; background: white">
 
         <!-- Mobile bar -->
         <div class="d-block d-lg-none h-100 py-4">
@@ -27,7 +27,7 @@
                     </div>
 
                     <!-- Open menu -->
-                    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler collapsed" type="button"  data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar top-bar"></span>
                         <span class="icon-bar middle-bar"></span>
                         <span class="icon-bar bottom-bar"></span>	
@@ -42,7 +42,7 @@
 
                 <!-- Logout -->
                 <?php if ($logged_in): ?>
-                    <div class="pt-1"><a class="logout mr-4" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></div>
+                    <div><a class="logout mr-2" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a></div>
                 <?php endif ?>
 
                 <!-- Investors area -->
@@ -54,20 +54,20 @@
 
                 <div class="pt-1 top-icons">
                     <a href="#" class="ml-3"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="ml-3"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="ml-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="ml-2 pl-1"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="ml-2 pl-1"><i class="fab fa-facebook-f"></i></a>
                 </div>
                 
             </div>
         </div>
-
+        
         <nav class="navbar navbar-expand-lg py-0 py-lg-3 px-lg-0 w-100" >
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 
                 <a class="text-center d-none d-lg-block" href="<?php echo home_url(); ?>"><img height="40" src="<?php echo get_bloginfo('template_directory'); ?>/assets/images/arq-logo.svg" alt="Logo"></a>
 
-                <div class="navbar-nav w-100 d-flex justify-content-lg-end">
+                <div class="navbar-nav w-100 d-flex justify-content-lg-end pt-1">
                     
                     <hr class="mt-2">
 
@@ -157,7 +157,15 @@
                          
                     <?php endforeach ?>
                     
-                    <a class="nav-item pl-lg-3 search-btn open-search"><img src="<?php echo get_bloginfo('template_url')?>/assets/images/search.png"></a>
+                    <a class="nav-item pl-lg-3 search-btn open-search text-center"><img src="<?php echo get_bloginfo('template_url')?>/assets/images/search.png"></a>
+
+                    <hr>
+
+                    <div class="d-flex justify-content-center mt-2 d-lg-none top-icons pb-5">
+                        <a href="#" class="mx-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="mx-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="mx-3"><i class="fab fa-facebook-f"></i></a>
+                    </div>
 
                 </div>
             </div>
@@ -166,7 +174,12 @@
 
     </div>
 
+
+
 </header>
+
+<div id="red" class="open-nav-bg" style="">
+</div>
 
 
 <?php require 'parts/part-search.php';

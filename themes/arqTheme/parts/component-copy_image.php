@@ -23,10 +23,10 @@
 
     <div class="container position-relative" style="z-index: 2">
         <div class="row">
-            <div class="col-md-5 py-5">
-                <div class="py-5 my-lg-5 text position-relative" style="opacity:0; top: 40px">
+            <div class="col-md-5 py-3 py-lg-5">
+                <div class="py-5 my-lg-5 text position-relative" style="opacity:0; top: 100px">
                     <h2><?php echo $title ?></h2>
-                    <div class="my-4"><?php echo $copy ?></div>
+                    <div class="mb-4"><?php echo $copy ?></div>
                     <a class="<?php echo $class_btn?>" href="<?php echo $button_link ?>"><?php echo $button_label?></a>
                 </div>
             </div>

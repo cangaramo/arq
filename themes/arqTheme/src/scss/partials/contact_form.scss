@@ -6,6 +6,10 @@
 
 .gform_wrapper {
 
+    .gfield_label {
+        display: none !important;
+    }
+
     li.hidden_label input {
         margin-top: 0 !important;
     }

@@ -4,6 +4,17 @@ header {
     background: white;
 
     .navbar-nav {
+
+        opacity: 0;
+
+        @media (min-width: 992px) {
+            opacity: 1;
+        }
+
+        hr {    
+            margin-top: 10px;
+        }
+
         .nav-link {
             text-transform: uppercase;
             text-align: center;
@@ -11,6 +22,7 @@ header {
             font-family: $roboto;
             font-weight: 300;
             position: relative;
+            font-size: 15px;
             
             &:hover {
                 color: $red;
@@ -119,10 +131,20 @@ header {
 
     .fab {
         color: $black;
-        font-size: 17px;
+        font-size: 22px;
+        transition: transform 0.4s;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+
+        @media(min-width:992px){
+            font-size: 17px;
+        }
 
         &:hover {
-            color: $red;
+            color: $red_hover;
+            transition: transform 0.3s;
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
         }
     }
 
@@ -136,4 +158,19 @@ header {
     margin-top: -2px;
     cursor: pointer;
     padding: .5rem 1rem;
+}
+
+.logout {
+    background: $ligth_gray;
+    padding: 6px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: Roboto,sans-serif;
+    cursor: pointer;
+
+    &:hover {
+        color: #fff;
+        background: $black;
+    }
 }

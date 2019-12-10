@@ -3,12 +3,12 @@
     $numbers = $values['numbers'];
 ?>
 
-
-<div class="bg-image numbers" style="background-image:url(<?php echo $bg_image ?>)">
+<div id="numbers-trigger"></div>
+<div class="bg-image" style="background-image:url(<?php echo $bg_image ?>)">
 
     <div class="bg-layer">
         <div class="container more-padding-top" >
-            <div class="row py-5 mt-5 mb-4 px-3 px-lg-0">
+            <div class="row py-5 mt-5 mb-4 px-3 px-lg-0 numbers position-relative">
 
                 <?php foreach ($numbers as $number): ?>
 

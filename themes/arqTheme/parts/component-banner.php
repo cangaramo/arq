@@ -13,6 +13,7 @@
     }
 ?>
 
+
 <?php if ($background == "Solid colour"): ?>
     <div class="banner position-relative" style="background:<?php echo $bg ?>">
 <?php else: ?>
@@ -22,7 +23,7 @@
         <div class="layer h-100 w-100">
             <div class="container h-100">
                 <div class="d-flex h-100 align-items-center">
-                    <h1><?php echo $title ?></h1>
+                    <h1 class="position-relative"><?php echo $title ?></h1>
                 </div>
             </div>
         </div>

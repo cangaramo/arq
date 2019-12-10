@@ -16,6 +16,26 @@ foreach($fields['components'] as $field){
 	}
 }
 
+global $user_login;
+
+$user = wp_get_current_user();
+$user_role = (array) $user->roles; 
+$role = $user_role[0];
+
+if ($role == "investor" || $role == "administrator"): 
+    $logged_in = true;
+else:
+    $logged_in = false;
+endif;    
+    
+$slug = basename(get_permalink());
+if ($slug == "arq-investor-area" && $logged_in == false){
+    $siteurl = home_url();
+	$url = $siteurl;
+	wp_redirect( $url );
+    exit;
+}
+
 ?>
 
 <?php get_header(); ?>

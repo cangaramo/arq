@@ -1,0 +1,77 @@
+@import 'variables.scss';
+
+footer {
+
+    position: relative;
+    z-index: 2;
+
+    .address {
+        border-left: 1px solid white;
+        height: 130px;
+        color: white;
+    }
+
+    p {
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+
+    .signup {
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    form {
+
+        @media (min-width:768px) {
+            display: flex;
+        }
+
+        .gform_body {
+
+            @media (min-width: 768px){
+                margin-right: 15px;
+            }
+
+            ul.gform_fields li.gfield {
+                margin: 0 !important;
+                padding: 0 !important;
+    
+                .ginput_container {
+                    margin: 0 !important;
+
+                    @media (min-width: 768px) {
+                        width: 290px !important;
+                    }
+    
+                    input {
+                        width: 100%;
+                        margin-bottom: 20px;
+
+                        @media (min-width: 768px) {
+                            margin-bottom: 0;
+                        }
+
+                        &::placeholder {
+                            text-transform: none;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .gform_footer {
+            margin: 0 !important;
+            padding: 0 !important;
+
+            input[type=submit]{
+                padding: 7px 20px 7px 20px!important;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}

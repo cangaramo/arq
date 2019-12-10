@@ -3,6 +3,7 @@
     $addresses = $footer['addresses'];
 ?>
 
+
 <div class="container py-5 addresses">
     <div class="row">
         <?php foreach ($addresses as $address): ?>
@@ -11,6 +12,6 @@
                     <?php echo $address['address']?>
                 </div>
             </div>
-        <?php endforeach ?>
+         <?php endforeach ?>
     </div>
 </div>

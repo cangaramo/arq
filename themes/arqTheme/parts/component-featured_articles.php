@@ -5,7 +5,9 @@
 
 <div class="container my-lg-5 py-5">
 
-    <h2 class="text-center pb-5"><?php echo $title ?></h2>
+    <?php if ($title): ?>
+        <h2 class="text-center pb-5"><?php echo $title ?></h2>
+    <?php endif ?>
 
     <div class="row boxes">
         

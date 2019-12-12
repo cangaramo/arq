@@ -118,6 +118,9 @@ h1.heading {
   font-style: normal; }
 
 /* Hyperlinks, backgrounds and colors */
+p {
+  font-size: 18px; }
+
 a {
   color: rgba(0, 0, 0, 0.85); }
   a:hover {
@@ -201,6 +204,9 @@ strong {
     text-decoration: none;
     color: white;
     background: rgba(0, 0, 0, 0.85); }
+
+.size-17 {
+  font-size: 17px; }
 
 .bg-image {
   background-size: cover;
@@ -295,8 +301,8 @@ strong {
 
 .boxes .box {
   box-shadow: 1px 2px 20px 2px rgba(0, 0, 0, 0.28);
-  height: 400px;
-  background: white; }
+  background: white;
+  padding-bottom: 45px; }
   .boxes .box .thumbnail {
     height: 150px;
     transition: transform 0.5s;
@@ -310,8 +316,9 @@ strong {
 
 .long-boxes .box {
   box-shadow: 1px 2px 20px 2px rgba(0, 0, 0, 0.28);
-  height: 570px;
-  background: white; }
+  background: white;
+  padding-bottom: 45px;
+  position: relative; }
   .long-boxes .box .thumbnail {
     height: 170px;
     transition: transform 0.5s;
@@ -906,7 +913,7 @@ header {
   font-style: normal; }
 
 .leadership .person {
-  height: 350px; }
+  height: 260px; }
   .leadership .person .img-person {
     height: 120px;
     width: 120px;

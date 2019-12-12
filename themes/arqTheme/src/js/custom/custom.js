@@ -66,7 +66,7 @@ $( document ).ready(function() {
     });
 
     //Hide management
-    $('#management-slider').hide();
+    $('#board-slider').hide();
 
     //Change slider
     $( ".open-slider" ).click(function() {
@@ -75,15 +75,16 @@ $( document ).ready(function() {
 
         if (slider == "board") {
             $('#management-slider').hide();
+            $('.board-members').slick("slickGoTo", 0);
             $('.board-members').slick('refresh');
             $('#board-slider').show();
             
             $('.open-slider').removeClass("active");
             $(this).addClass("active");
-
         }
         else if (slider == "management") {
             $('#board-slider').hide();
+            $('.management-team').slick("slickGoTo", 0);
             $('.management-team').slick('refresh');
             $('#management-slider').show();
 
@@ -438,8 +439,42 @@ $( document ).ready(function() {
         field = $("#field_1_3")
         $("#gform_fields_1").append(field);
     }
+
+
+    //Activity
+    $('body').on('click', '.activity', function(){
+        post = $(this).data("post");
+        SetActivity(post);
+    });
+
 });
 
+
+function SetActivity(post){
+
+    protocol = window.location.protocol
+    host = window.location.host;
+    home_url = protocol + "//" + host;
+    
+    ajax_url = home_url + "/wp-admin/admin-ajax.php";
+
+    $.ajax({
+        url: ajax_url,
+        type : 'post',
+        data : {
+            action : 'set_activity',
+            post: post,
+        },
+        beforeSend:function(xhr){
+
+        },
+        success:function(response){
+			console.log(response);
+        }
+    });
+
+    return false; 
+}
 
 function LoadPosts(keyword){
 

@@ -70,7 +70,10 @@ function load_documents() {
                     <p class="mb-1"><?php echo $date ?></p>
                     <p><?php echo $description ?></p>
                     <div class="absolute-link">
-                        <a class="link" target="<?php echo $target ?>" href="<?php echo $link ?>"><?php echo $label ?></a>
+                        <a class="link activity"  
+                        
+                        target="<?php echo $target ?>" 
+                        data-post="<?php echo $document_id?>"><?php echo $label ?></a>
                     </div>
                 </div>
             </div>

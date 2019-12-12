@@ -14,12 +14,19 @@
     <div class="w-100 h-100 <?php echo $class_layer ?>">
         <div class="container h-100">
             <div class="d-flex h-100 align-items-center">
-                <div class="row">
+                <div class="row w-100">
                     <div class="col-lg-6 px-4 px-lg-3">
                         <div class="text position-relative" style="opacity:0; left: -70px">
-                            <img style="height:85px" src="<?php echo get_bloginfo('template_url')?>/assets/images/play-btn.png">
-                            <h2 class="pfdin mt-5"><?php echo $title ?></h2>
-                            <div class="mb-4"><?php echo $text ?></div>
+                            <img class="d-block mb-5" style="height:85px" src="<?php echo get_bloginfo('template_url')?>/assets/images/play-btn.png">
+
+                            <?php if ($title): ?>
+                                <h2 class="pfdin mt-5"><?php echo $title ?></h2>
+                            <?php endif ?>
+
+                            <?php if ($text):?>
+                                <div class="mb-4"><?php echo $text ?></div>
+                            <?php endif ?>
+
                             <a class="link" href="#" data-toggle="modal" data-target="#videoModal<?php echo $component_index?>">Watch film</a>
                         </div>
                     </div>

@@ -27,7 +27,9 @@
                 <div class="py-5 my-lg-5 text position-relative" style="opacity:0; top: 100px">
                     <h2><?php echo $title ?></h2>
                     <div class="mb-4"><?php echo $copy ?></div>
-                    <a class="<?php echo $class_btn?>" href="<?php echo $button_link ?>"><?php echo $button_label?></a>
+                    <?php if ($button_label) :?>
+                        <a class="<?php echo $class_btn?>" href="<?php echo $button_link ?>"><?php echo $button_label?></a>
+                    <?php endif ?>
                 </div>
             </div>
         </div>

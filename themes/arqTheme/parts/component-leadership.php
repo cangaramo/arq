@@ -19,8 +19,8 @@
     <h2 class="text-center py-5">Leadership</h2>
 
     <div class="d-flex justify-content-center">
-        <a class="open-slider mx-1 py-2 active" data-slider="board">Board</a>
-        <a class="open-slider mx-1 py-2" data-slider="management">Management team</a>
+        <a class="open-slider mx-1 py-2 active" data-slider="management">Management team</a>
+        <a class="open-slider mx-1 py-2" data-slider="board">Board</a>
     </div>
 
     <div class="my-4 mx-5">

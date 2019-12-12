@@ -35,7 +35,9 @@ function load_updates(){
 
 					<p class="mb-1"><?php echo $date ?></p>
 					<div class="absolute-link">
-						<a class="link play-audio" data-audio="<?php echo $audio ?>">Listen</a>
+						<a class="link play-audio activity" 
+                        data-post="<?php echo $update_id?>"
+                        data-audio="<?php echo $audio ?>">Listen</a>
 					</div>
 
 				</div>

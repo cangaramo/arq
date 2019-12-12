@@ -111,6 +111,204 @@ add_action( 'wp_ajax_nopriv_load_news', 'load_news' );
 add_action( 'wp_ajax_load_news', 'load_news' );
 
 /* Hide admin bar */
-show_admin_bar(false);
+function cc_wpse_278096_disable_admin_bar() {
+	if (current_user_can('administrator')) {
+	  show_admin_bar(true); 
+	} else {
+	  show_admin_bar(false);
+	}
+}
+add_action('after_setup_theme', 'cc_wpse_278096_disable_admin_bar');
 
 
+function my_admin_menu() {
+	add_menu_page(
+		__( 'Sample page', 'my-textdomain' ),
+		__( 'Activity', 'my-textdomain' ),
+		'manage_options',
+		'sample-page',
+		'my_admin_page_contents',
+		'dashicons-chart-area',
+		40
+	);
+}
+
+add_action( 'admin_menu', 'my_admin_menu' );
+
+
+function my_admin_page_contents() {
+
+
+	global $wpdb;
+	$table = 'user_activity';
+
+	$result = $wpdb->get_results ( "SELECT * FROM $table");
+
+				 
+	?>
+
+		<style>
+		table{
+			width: 500px
+		}
+		th {
+				color: #fff;
+				background-color: #343a40;
+				border-color: #454d55;
+				text-align: left;
+		}
+
+		tr {
+			background: white;
+		}
+		table td, table th {
+			padding: .55rem;
+			vertical-align: top;
+			border-top: 1px solid #dee2e6;
+		}
+		td a {
+			color: #9e0317 !important;
+			text-decoration: none;
+		}
+		</style>
+
+		<h1 style="margin-top: 40px; margin-bottom: 30px">
+			Users downloads
+		</h1>
+
+		<div>
+
+			<table class="table">
+
+				<?php foreach ( $result as $user ): 
+					$user_id = $user->Id;
+					$username = $user->user;
+					$activity = $user->activity;
+					$documents = explode(',', $activity);
+
+					$args = array(
+						'post_type' => array('investor_documents', 'shareholder_updates'),
+						'include' => $documents,
+						'numberposts' => -1,
+					);
+
+					$posts = get_posts($args);
+
+					//print_r($posts);
+
+				?>
+
+					<thead>
+						<tr>
+						<th><?php echo $username ?> </th>
+						</tr>
+					</thead>
+
+					<tbody>
+					<?php foreach ( $posts as $post ): 
+						$title = $post->post_title;
+						$link =  $post->guid;
+					?>
+						<tr>
+							<td><a href="<?php echo $link ?>"><?php echo $title ?></a></td>
+						</tr>
+
+					<?php endforeach ?>
+					</tbody>
+
+				<?php endforeach ?>
+
+			</table>
+
+		</div>
+	<?php
+}
+
+
+/*
+function set_activity() {
+
+
+	$user_id = get_current_user_id();
+	$user = wp_get_current_user();
+	$login = $user->user_login;
+	$post = $_POST['post'];
+	$date = date( 'd/m/Y H:i:s', current_time( 'timestamp', 0 ) );
+
+	//Get activity array
+	global $wpdb;
+	$query = "SELECT activity FROM user_activity WHERE Id = "  .  $user_id;
+	$user_activity = $wpdb->get_results($query);
+
+	//If array doesn't exist 
+	if(empty($user_activity)) {
+
+		//Create array
+		$posts = array();
+
+		//Add string to array
+		array_push($posts, $post);
+		$new_activity = implode (",", $posts);
+
+		//Create new row in db
+		global $wpdb;
+		$table = 'user_activity';
+		
+		$data = array('Id' => $user_id, 'user' => $login, 'activity' => $new_activity, 'date' => $date);
+		$format = array('%d','%s', '%s', '%s');
+		$wpdb->insert($table,$data,$format);
+		$my_id = $wpdb->insert_id; 
+	}
+
+	//If array exists and it's not in the array
+	else if (!in_array($post, $posts)) {
+
+		//Get array
+		$activity_array = $user_activity[0]->activity;
+		$posts = explode(',', $activity_array);
+
+		//Add string to array
+		array_push($posts, $post);
+		$new_activity = implode (",", $posts);
+
+		//Update row in db
+		global $wpdb;
+		$table = 'user_activity';
+
+		$data = [ 'activity' => $new_activity ]; 
+		$format = [ '%s' ];
+		$where = [ 'Id' => $user_id ]; 
+		$where_format = [ '%d' ];
+		$wpdb->update( $table, $data, $where, $format, $where_format );
+	}
+
+
+	die();
+}*/
+
+
+function set_activity() {
+
+
+	$user_id = get_current_user_id();
+	$user = wp_get_current_user();
+	$login = $user->user_login;
+	$post = $_POST['post'];
+	$date = date( 'd/m/Y H:i:s', current_time( 'timestamp', 0 ) );
+
+
+	//Get activity array
+	global $wpdb;
+	$query = "SELECT * FROM activity WHERE Id = "  .  $user_id;
+	$user_activity = $wpdb->get_results($query);
+	print_r($user_activity);
+
+
+	foreach ($user_activity as $activity) {
+		
+	}
+
+}
+
+add_action( 'wp_ajax_nopriv_set_activity', 'set_activity' );
+add_action( 'wp_ajax_set_activity', 'set_activity' );

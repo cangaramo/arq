@@ -1234,13 +1234,17 @@ footer {
   position: relative; }
 
 .products {
-  background: white;
   position: relative;
   z-index: 2; }
   .products .product .product-img {
-    height: 300px;
+    height: 250px;
     position: relative;
     opacity: 0; }
+    @media (min-width: 992px) {
+      .products .product .product-img {
+        height: 210px; } }
+  .products .product p {
+    font-size: 16px; }
 
 .short-text p {
   margin-bottom: 0;

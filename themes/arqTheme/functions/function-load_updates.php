@@ -7,7 +7,10 @@ function load_updates(){
 	$args = array(
         'post_type' => 'shareholder_updates', 
 		'posts_per_page' => $posts_per_page,
-		'paged' => $current_page
+        'paged' => $current_page,
+        'meta_key'			=> 'date',
+        'orderby'			=> 'meta_value',
+        'order'				=> 'DESC'
 	);
 	
 	$updates = get_posts($args);

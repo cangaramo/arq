@@ -162,15 +162,22 @@ body {
 
 
 .products {
-    background: white;
     position: relative;
     z-index: 2;
 
     .product {
         .product-img {
-            height: 300px;
+            height: 250px;
             position: relative;
             opacity: 0;
+
+            @media (min-width: 992px){
+                height: 210px;
+            }
+        }
+
+        p {
+            font-size: 16px;
         }
     }
 }

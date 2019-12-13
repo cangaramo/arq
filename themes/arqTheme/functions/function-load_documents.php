@@ -7,7 +7,10 @@ function load_documents() {
     $args = array(
         'post_type' => 'investor_documents', 
         'paged' => $current_page,
-        'posts_per_page' => $posts_per_page
+        'posts_per_page' => $posts_per_page,
+        'meta_key'			=> 'date',
+        'orderby'			=> 'meta_value',
+        'order'				=> 'DESC'
     );
     
     $documents = get_posts($args);

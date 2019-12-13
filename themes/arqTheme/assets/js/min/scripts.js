@@ -508,7 +508,7 @@ function LoadDocuments(){
     
     ajax_url = home_url + "/wp-admin/admin-ajax.php";
 
-    posts_per_page = 3;
+    posts_per_page = 6;
 
     $.ajax({
         url: ajax_url,

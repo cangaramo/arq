@@ -71,8 +71,7 @@ function load_documents() {
                     <p><?php echo $description ?></p>
                     <div class="absolute-link">
                         <a class="link activity"  
-                        
-                        target="<?php echo $target ?>" 
+                        target="<?php echo $target ?>" href="<?php echo $link ?>"
                         data-post="<?php echo $document_id?>"><?php echo $label ?></a>
                     </div>
                 </div>

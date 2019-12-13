@@ -458,6 +458,8 @@ function SetActivity(post){
     
     ajax_url = home_url + "/wp-admin/admin-ajax.php";
 
+    console.log(ajax_url);
+
     $.ajax({
         url: ajax_url,
         type : 'post',

@@ -135,34 +135,35 @@ function my_admin_menu() {
 
 add_action( 'admin_menu', 'my_admin_menu' );
 
-
+/* User activity */
 function my_admin_page_contents() {
-
 
 	global $wpdb;
 	$table = 'user_activity';
-
-	$result = $wpdb->get_results ( "SELECT * FROM $table");
-
+	$result = $wpdb->get_results ( "SELECT * FROM $table ORDER BY user, date DESC");
 				 
 	?>
 
 		<style>
 		table{
-			width: 500px
+			width: 95%;
+		}
+		@media (min-width: 992px){
+			table {
+				width: 550px;
+			}
 		}
 		th {
-				color: #fff;
-				background-color: #343a40;
-				border-color: #454d55;
-				text-align: left;
+			color: #fff;
+			background-color: #343a40;
+			border-color: #454d55;
+			text-align: left;
 		}
-
 		tr {
 			background: white;
 		}
 		table td, table th {
-			padding: .55rem;
+			padding: .48rem;
 			vertical-align: top;
 			border-top: 1px solid #dee2e6;
 		}
@@ -170,9 +171,18 @@ function my_admin_page_contents() {
 			color: #9e0317 !important;
 			text-decoration: none;
 		}
+
+		td a:hover {
+			color: #343a40 !important;
+		}
+
+		td a:focus {
+			outline: none;
+			box-shadow: none;
+		}
 		</style>
 
-		<h1 style="margin-top: 40px; margin-bottom: 30px">
+		<h1 style="margin-top: 30px; margin-bottom: 30px">
 			Users downloads
 		</h1>
 
@@ -180,43 +190,55 @@ function my_admin_page_contents() {
 
 			<table class="table">
 
-				<?php foreach ( $result as $user ): 
+				<?php 
+				foreach ( $result as $user ): 
+				
 					$user_id = $user->Id;
 					$username = $user->user;
 					$activity = $user->activity;
-					$documents = explode(',', $activity);
+					$link = get_the_permalink($activity);
+					$title = get_the_title($activity);
 
-					$args = array(
-						'post_type' => array('investor_documents', 'shareholder_updates'),
-						'include' => $documents,
-						'numberposts' => -1,
-					);
+					//Date
+					$date = $user->date;
+					$date = substr($date, 0, -3);
 
-					$posts = get_posts($args);
+					if ($username != $last_username): 
+						$total_activity = 0;
+					?>
 
-					//print_r($posts);
+						<thead>
+							<tr>
+							<th><?php echo $username ?></th>
+							</tr>
+						</thead>
+					
+					<?php else: 
+						$total_activity = $total_activity + 1;
+					?>
 
-				?>
 
-					<thead>
-						<tr>
-						<th><?php echo $username ?> </th>
-						</tr>
-					</thead>
+					<?php endif ?>
+
 
 					<tbody>
-					<?php foreach ( $posts as $post ): 
-						$title = $post->post_title;
-						$link =  $post->guid;
-					?>
-						<tr>
-							<td><a href="<?php echo $link ?>"><?php echo $title ?></a></td>
-						</tr>
 
-					<?php endforeach ?>
+						<?php if ($total_activity < 10) : ?>
+
+							<tr>
+								<td>				
+								<a href="<?php echo $link ?>"><?php echo $title ?></a><span style="float:right"><?php echo $date ?></span>
+								</td>
+							</tr>
+
+						<?php endif ?>
+
 					</tbody>
 
-				<?php endforeach ?>
+				<?php 
+					$last_username = $username;
+
+				endforeach ?>
 
 			</table>
 
@@ -224,91 +246,62 @@ function my_admin_page_contents() {
 	<?php
 }
 
-
-/*
 function set_activity() {
-
 
 	$user_id = get_current_user_id();
 	$user = wp_get_current_user();
 	$login = $user->user_login;
-	$post = $_POST['post'];
+	$current_post = $_POST['post'];
 	$date = date( 'd/m/Y H:i:s', current_time( 'timestamp', 0 ) );
+
+	$add_post = true;
+
 
 	//Get activity array
 	global $wpdb;
-	$query = "SELECT activity FROM user_activity WHERE Id = "  .  $user_id;
+	$query = "SELECT * FROM user_activity WHERE Id = "  .  $user_id;
 	$user_activity = $wpdb->get_results($query);
 
-	//If array doesn't exist 
+
+	//User has no activity
 	if(empty($user_activity)) {
+		$add_post = true;
+	}
 
-		//Create array
+	//User has activity -> check if post is already stored
+	else {
+		echo 'user has activity';
 		$posts = array();
+		foreach ($user_activity as $activity) {
+			$post = $activity->activity;
+			array_push($posts, $post);
+		}
 
-		//Add string to array
-		array_push($posts, $post);
-		$new_activity = implode (",", $posts);
+		//If post is not stored
+		if (!in_array($post, $posts)) {
+			$add_post = true;
+		}
+	}
 
-		//Create new row in db
+	//Add post
+	if ($add_post){
 		global $wpdb;
 		$table = 'user_activity';
 		
-		$data = array('Id' => $user_id, 'user' => $login, 'activity' => $new_activity, 'date' => $date);
+		$data = array('Id' => $user_id, 'user' => $login, 'activity' => $current_post, 'date' => $date);
 		$format = array('%d','%s', '%s', '%s');
 		$wpdb->insert($table,$data,$format);
 		$my_id = $wpdb->insert_id; 
-	}
 
-	//If array exists and it's not in the array
-	else if (!in_array($post, $posts)) {
+		$wpdb->show_errors();
 
-		//Get array
-		$activity_array = $user_activity[0]->activity;
-		$posts = explode(',', $activity_array);
-
-		//Add string to array
-		array_push($posts, $post);
-		$new_activity = implode (",", $posts);
-
-		//Update row in db
-		global $wpdb;
-		$table = 'user_activity';
-
-		$data = [ 'activity' => $new_activity ]; 
-		$format = [ '%s' ];
-		$where = [ 'Id' => $user_id ]; 
-		$where_format = [ '%d' ];
-		$wpdb->update( $table, $data, $where, $format, $where_format );
 	}
 
 
 	die();
-}*/
-
-
-function set_activity() {
-
-
-	$user_id = get_current_user_id();
-	$user = wp_get_current_user();
-	$login = $user->user_login;
-	$post = $_POST['post'];
-	$date = date( 'd/m/Y H:i:s', current_time( 'timestamp', 0 ) );
-
-
-	//Get activity array
-	global $wpdb;
-	$query = "SELECT * FROM activity WHERE Id = "  .  $user_id;
-	$user_activity = $wpdb->get_results($query);
-	print_r($user_activity);
-
-
-	foreach ($user_activity as $activity) {
-		
-	}
 
 }
 
 add_action( 'wp_ajax_nopriv_set_activity', 'set_activity' );
 add_action( 'wp_ajax_set_activity', 'set_activity' );
+

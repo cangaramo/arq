@@ -39,28 +39,40 @@ if ($logged_in == false){
     </div>
 
     <!-- Title and copy -->
-    <div class="container py-3 py-lg-5">
+    <div class="container">
 
-        <div class="row">
+        <?php if ( $all_fields['type'] == 'PDF' || $all_fields['type'] == 'Investor' ): ?>
 
-            <div class="col-lg-6 mb-4 pr-lg-5">
-                <h2><?php echo $title ?></h2>
-
-                <?php if ($all_fields['image']): ?>
-                    <img class="w-100 mt-4" src="<?php echo $all_fields['image'] ?>">
-
-                <?php elseif ($all_fields['vimeo_id']): ?>
-                    <div class='embed-container mt-4'>
-                        <iframe src='https://player.vimeo.com/video/<?php echo $all_fields['vimeo_id']?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                    </div>
-                <?php endif ?>
+            <div class="pb-4">
+                <h2 class="mt-4 mb-4"><?php echo $title ?></h2>
+                <iframe style="pointer-events: none;" src="<?php echo $all_fields['file'] ?>#toolbar=0" width="100%" height="800px"></iframe>
             </div>
 
-            <div class="col-lg-6 pl-lg-4">
-                <?php echo $all_fields['copy'] ?>
+        <?php else: ?>
+
+            <div class="row py-3 py-lg-5">
+
+                <div class="col-lg-6 mb-4 pr-lg-5">
+                    <h2><?php echo $title ?></h2>
+
+                    <?php if ($all_fields['image']): ?>
+                        <img class="w-100 mt-4" src="<?php echo $all_fields['image'] ?>">
+
+                    <?php elseif ($all_fields['vimeo_id']): ?>
+                        <div class='embed-container mt-4'>
+                            <iframe src='https://player.vimeo.com/video/<?php echo $all_fields['vimeo_id']?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        </div>
+                    <?php endif ?>
+                </div>
+
+                <div class="col-lg-6 pl-lg-4">
+                    <?php echo $all_fields['copy'] ?>
+                </div>
+
             </div>
 
-        </div>
+        <?php endif ?>
+
     </div>
 
     <!-- Related articles -->

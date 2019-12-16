@@ -38,8 +38,8 @@ function load_documents() {
                     $icon = get_bloginfo('template_url') . '/assets/images/investor.png';
                     $label = "Download";
                     $file = get_field('file', $document_id);
-                    $link = $file;
-                    $target = "_blank";
+                    $link = $permalink;
+                    //$target = "_blank";
                 break;
                 case 'Film':
                     $icon = get_bloginfo('template_url') . '/assets/images/film.png';
@@ -60,8 +60,8 @@ function load_documents() {
                     $icon = get_bloginfo('template_url') . '/assets/images/pdf.png';
                     $label = "Download";
                     $file = get_field('file', $document_id);
-                    $link = $file;
-                    $target = "_blank";
+                    $link = $permalink;
+                    //$target = "_blank";
                 break;
             }
         ?>

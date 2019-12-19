@@ -25,7 +25,7 @@
                     </div>
                 <?php endforeach ?>
             </div>
-            <p class="text-center py-5 color-white">© 2019 Arq | Privacy Policy </p>
+            <p class="text-center py-5 color-white">© 2019 Arq | <a href="/privacy-policy">Privacy Policy</a> </p>
         </div>
     </div>
 

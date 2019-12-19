@@ -28,7 +28,7 @@ function load_updates(){
 			$icon = get_bloginfo('template_url') . '/assets/images/audio.png';
 		?>
 
-			<div class="col-4 my-4">
+			<div class="col-lg-4 my-4">
 				<div class="p-4 box">
 
 					<div class="d-flex align-items-center justify-content-between">

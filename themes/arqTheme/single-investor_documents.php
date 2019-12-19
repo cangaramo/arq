@@ -41,11 +41,11 @@ if ($logged_in == false){
     <!-- Title and copy -->
     <div class="container">
 
-        <?php if ( $all_fields['type'] == 'PDF' || $all_fields['type'] == 'Investor' ): ?>
+        <?php if ( $all_fields['type'] == 'PDF' || $all_fields['type'] == 'Investor' || $all_fields['type'] == 'Financial' ): ?>
 
             <div class="pb-4">
                 <h2 class="mt-4 mb-4"><?php echo $title ?></h2>
-                <iframe style="pointer-events: none;" src="<?php echo $all_fields['file'] ?>#toolbar=0" width="100%" height="800px"></iframe>
+                <iframe src="<?php echo $all_fields['file'] ?>#toolbar=0" width="100%" height="800px"></iframe>
             </div>
 
         <?php else: ?>

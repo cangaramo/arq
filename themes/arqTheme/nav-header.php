@@ -157,8 +157,16 @@
                          
                     <?php endforeach ?>
                     
-                    <a class="nav-item pl-lg-3 search-btn open-search text-center"><img src="<?php echo get_bloginfo('template_url')?>/assets/images/search.png"></a>
+                    <!-- Investors area -->
+                    <?php if ($logged_in): ?>
+                        <a class="nav-item nav-link px-lg-0 mx-lg-3 d-block d-lg-none" href="/arq-investor-area/"><span>Investors</span></a>
+                    <?php else: ?>
+                        <a class="nav-item nav-link px-lg-0 mx-lg-3 d-block d-lg-none" href="/login"><span>Investors Login</span></a>
+                    <?php endif ?>
 
+                    <hr>
+
+                    <a class="nav-item pl-lg-3 search-btn open-search text-center"><img src="<?php echo get_bloginfo('template_url')?>/assets/images/search.png"></a>
                     <hr>
 
                     <div class="d-flex justify-content-center mt-2 d-lg-none top-icons pb-5">

@@ -36,7 +36,7 @@ function load_documents() {
                 break;
                 case 'Investor':
                     $icon = get_bloginfo('template_url') . '/assets/images/investor.png';
-                    $label = "Download";
+                    $label = "Read";
                     $file = get_field('file', $document_id);
                     $link = $permalink;
                     //$target = "_blank";
@@ -58,7 +58,7 @@ function load_documents() {
                 break;
                 case 'PDF':
                     $icon = get_bloginfo('template_url') . '/assets/images/pdf.png';
-                    $label = "Download";
+                    $label = "Read";
                     $file = get_field('file', $document_id);
                     $link = $permalink;
                     //$target = "_blank";
@@ -66,7 +66,7 @@ function load_documents() {
             }
         ?>
 
-            <div class="col-4 my-4">
+            <div class="col-lg-4 my-4">
                 <div class="p-4 box">
                     <img src="<?php echo $icon ?>">
                     <h4 class="mt-4 mb-3"><?php echo $title ?></h4>

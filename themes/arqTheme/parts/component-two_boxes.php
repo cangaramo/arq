@@ -14,7 +14,7 @@
 
 
     <!-- Boxes -->
-    <div class="container py-5">
+    <div class="container pt-5 pb-2">
 
         <div class="px-lg-5 more-padding-top">
 

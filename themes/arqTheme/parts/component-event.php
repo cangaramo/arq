@@ -4,8 +4,19 @@
     $event = $values['event'];
     $event_title = get_the_title($event);
     $event_fields = get_fields($event);
-    $event_permalink = get_the_permalink($event);
+    $file = $event_fields['file'];
+    $link = $event_fields['link'];
 
+    if ($link) {
+        $event_permalink = $link;
+    }
+    else if ($file) {
+        $event_permalink = $file;
+    }
+    else {
+        $event_permalink = get_the_permalink($event);
+    }
+    
     if ($button_colour == "White") {
         $class_btn = "link-white";
     }
@@ -22,7 +33,7 @@
                 <div class="more-padding-top">
                     <h2><?php echo $event_title ?></h2>
                     <div class="my-4"><?php echo $event_fields['description'] ?></div>
-                    <a class="<?php echo $class_btn ?>" href="<?php echo $event_permalink ?>">More</a>
+                    <a class="<?php echo $class_btn ?>" href="<?php echo $event_permalink ?>" target="_blank">More</a>
                 </div>
             </div>
         </div>

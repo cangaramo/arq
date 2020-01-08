@@ -1,6 +1,7 @@
 var current_page_documents = 1;
 var current_page_updates = 1;
 var current_page_news = 1;
+var current_doc_year = -1;
 var num_news = 3;
 
 $( document ).ready(function() {
@@ -281,6 +282,11 @@ $( document ).ready(function() {
         LoadDocuments();
     }); 
 
+    $('select').on('change', function() {
+        current_doc_year = this.value;
+        LoadDocuments();
+    });
+
 
     /* Load updates */
      if( $('#updates-response').length ) {
@@ -546,7 +552,7 @@ function LoadPosts(keyword){
 }
 
 
-function LoadDocuments(){
+function LoadDocuments(val){
 
     protocol = window.location.protocol
     host = window.location.host;
@@ -563,6 +569,7 @@ function LoadDocuments(){
             action : 'load_documents',
             current_page: current_page_documents,
             posts_per_page: posts_per_page,
+            year: current_doc_year
         },
         beforeSend:function(xhr){
 

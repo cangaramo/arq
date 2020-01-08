@@ -16,10 +16,10 @@ $terms = get_terms( array(
             </div>
             <div>
                 <select>
-                    <?php print_r($terms); ?>
+                    <option value="-1">Filter</option> 
                     <?php foreach ($terms as $term): 
                     ?>
-                        <option value=""><?php echo $term->name ?></option> 
+                        <option value="<?php echo $term->term_id ?>"><?php echo $term->name ?></option> 
                     <?php endforeach ?>
                 </select>
             </div>

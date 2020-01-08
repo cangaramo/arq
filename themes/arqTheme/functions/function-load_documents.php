@@ -3,6 +3,24 @@ function load_documents() {
 
     $current_page = $_POST['current_page'];
     $posts_per_page = $_POST['posts_per_page'];
+    $year = $_POST['year'];
+    $years = array();
+
+    if ($year != -1) {
+        array_push($years, $year);
+    }
+    else {
+
+        $terms = get_terms( array(
+            'taxonomy' => 'document_year',
+            'hide_empty' => false,
+        ) );
+
+        foreach ($terms as $term): 
+           $year = $term->term_id;
+           array_push($years, $year);
+        endforeach ;
+    }
 
     $args = array(
         'post_type' => 'investor_documents', 
@@ -10,7 +28,14 @@ function load_documents() {
         'posts_per_page' => $posts_per_page,
         'meta_key'			=> 'date',
         'orderby'			=> 'meta_value',
-        'order'				=> 'DESC'
+        'order'				=> 'DESC',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'document_year',
+                'field' => 'term_id',
+                'terms' => $years,
+            )
+        )
     );
     
     $documents = get_posts($args);

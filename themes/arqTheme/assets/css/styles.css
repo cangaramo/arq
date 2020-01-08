@@ -245,7 +245,7 @@ strong {
 
 @media (min-width: 992px) {
   .more-padding-top {
-    padding: 130px 0; } }
+    padding: 130px 0 50px 0; } }
 
 .addresses {
   color: #585858; }
@@ -1327,3 +1327,24 @@ img.gform_ajax_spinner {
     .modalCopy .modal-dialog .modal-content .modal-body img {
       max-width: 100%;
       max-height: 400px; }
+
+/* Filter button */
+select {
+  width: 200px;
+  background: #fff;
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 6px 3px 3px 7px;
+  text-transform: uppercase;
+  font-size: 14px;
+  background-color: #fff;
+  background-image: url(../../images/select-arrow.png);
+  background-position-x: 95%;
+  background-position-y: 30%;
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  border: 1px solid white;
+  font-weight: 500;
+  color: #585858; }
+  select:focus {
+    outline: none; }

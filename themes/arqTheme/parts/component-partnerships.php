@@ -10,7 +10,7 @@
 
             <?php foreach ($images as $image): ?>
 
-                <a href="<?php echo $image['link'] ?>"><img height="60" class="d-block mx-auto mx-lg-4 my-3" src="<?php echo $image['image']?>"></a> 
+                <a href="<?php echo $image['link'] ?>" target="_blank" ><img height="60" class="d-block mx-auto mx-lg-4 my-3" src="<?php echo $image['image']?>"></a> 
             
             <?php endforeach ?>
 

@@ -66,10 +66,16 @@ function load_documents() {
             }
         ?>
 
-            <div class="col-lg-4 my-4">
+            <div class="col-lg-4 mt-4">
                 <div class="p-4 box">
-                    <img src="<?php echo $icon ?>">
-                    <h4 class="mt-4 mb-3"><?php echo $title ?></h4>
+                    <div class="row">
+                        <div class="col-9">
+                            <h4 class=""><?php echo $title ?></h4>
+                        </div>
+                        <div class="col-3">
+                            <img height="35" src="<?php echo $icon ?>">
+                        </div>
+                    </div>
                     <p class="mb-1"><?php echo $date ?></p>
                     <p><?php echo $description ?></p>
                     <div class="absolute-link">

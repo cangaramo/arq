@@ -53,9 +53,9 @@
                 <?php endif ?>
 
                 <div class="pt-1 top-icons">
-                    <a href="#" class="ml-3"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="ml-2 pl-1"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="ml-2 pl-1"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com/ArqCompany" target="_blank" class="ml-3"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/arq-group-limited/" target="_blank" class="ml-2 pl-1"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/ArqCompany" target="_blank" class="ml-2 pl-1"><i class="fab fa-facebook-f"></i></a>
                 </div>
                 
             </div>
@@ -170,9 +170,9 @@
                     <hr>
 
                     <div class="d-flex justify-content-center mt-2 d-lg-none top-icons pb-5">
-                        <a href="#" class="mx-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="mx-3"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="mx-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com/ArqCompany" target="_blank" class="mx-3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/arq-group-limited/" target="_blank" class="mx-3"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/ArqCompany" target="_blank" class="mx-3"><i class="fab fa-facebook-f"></i></a>
                     </div>
 
                 </div>

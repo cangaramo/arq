@@ -7,7 +7,7 @@
 ?>
 
 <div class="bg-dark_gray color-white">
-    <div class="container py-5 vacancies">
+    <div  id="vacancies" class="container py-5 vacancies">
 
         <h2 class="mb-5">Vacancies</h2>
 

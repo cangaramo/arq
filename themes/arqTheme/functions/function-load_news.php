@@ -5,7 +5,7 @@ function load_news(){
 
     $args = array(
         'post_type' => 'news',
-        'posts_per_page' => 3,
+        'posts_per_page' => 4,
         'paged' => $current_page
     );
     $news = get_posts($args);
@@ -22,8 +22,10 @@ function load_news(){
                 $article_link = get_the_permalink($article_id);
 
                 if (  ($index+1)%3 == 0){
-                    $class_col = 'col-lg-12';
-                    $class_big = 'big';
+                    //$class_col = 'col-lg-12';
+                    //$class_big = 'big';
+                    $class_col = 'col-lg-6';
+                    $class_big = '';
                 }
                 else {
                     $class_col = 'col-lg-6';

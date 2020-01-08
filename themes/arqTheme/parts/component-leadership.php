@@ -16,6 +16,9 @@
 
 <div class="container leadership py-5">
 
+    <div id="board-directors"></div>
+    <div id="management-team"></div>
+
     <h2 class="text-center py-5">Leadership</h2>
 
     <div class="d-flex justify-content-center">

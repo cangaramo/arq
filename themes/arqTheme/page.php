@@ -1,6 +1,5 @@
-<?php
-get_header(); ?>
-
+<?php get_header(); ?>
+<?php require('nav-header.php') ?>
     <main>
 
         <div class="container my-5">
@@ -16,7 +15,6 @@ get_header(); ?>
         
     </main>
 
-<?php
-get_footer();
-?>
+<?php require('nav-footer.php') ?>
+<?php get_footer(); ?>
 

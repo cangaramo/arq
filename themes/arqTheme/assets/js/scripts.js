@@ -182,10 +182,10 @@ $( document ).ready(function() {
             text = $(".copy-image .text").eq(index);
             trigger = "#" + id;
                 
-            new ScrollMagic.Scene({triggerElement: trigger, offset: 50})
+            new ScrollMagic.Scene({triggerElement: trigger, offset: -320})
             .setTween(text, 1.1, {opacity: 1, top:0})
             .addTo(controller)
-            .reverse(false);  
+            .reverse(false);
         });
     }
 
@@ -314,7 +314,7 @@ $( document ).ready(function() {
         current_page_news = parseInt(current_page_news) + 1;
         LoadNews();
 
-        num_news = parseInt(num_news) + 3;
+        num_news = parseInt(num_news) + 4;
         total = $('#news-response').data("total");
      
         if (num_news >= total) {
@@ -447,7 +447,53 @@ $( document ).ready(function() {
         SetActivity(post);
     });
 
+
+    /* Redirect open modal */
+    $(window).on('hashchange', function(e){
+
+        url = window.location.href;
+        if ( url.includes("management-team") ) {
+            refreshSlider("management");
+        }
+        else if ( url.includes("board-directors") ) {
+            refreshSlider("board");
+        }
+    });
+
+    if (window.location.hash) {
+
+        url = window.location.href;
+        if ( url.includes("management-team") ) {
+            refreshSlider("management");
+        }
+        else if ( url.includes("board-directors") ) {
+            refreshSlider("board");
+        }
+    }
+
 });
+
+function refreshSlider(slider) {
+
+    if (slider == "board") {
+        $('#management-slider').hide();
+        $('.board-members').slick("slickGoTo", 0);
+        $('.board-members').slick('refresh');
+        $('#board-slider').show();
+        
+        $('.open-slider').removeClass("active");
+        $('.open-slider').eq(1).addClass("active");
+    }
+    else if (slider == "management") {
+        $('#board-slider').hide();
+        $('.management-team').slick("slickGoTo", 0);
+        $('.management-team').slick('refresh');
+        $('#management-slider').show();
+
+        $('.open-slider').removeClass("active");
+        $('.open-slider').eq(0).addClass("active");        
+    }
+}
 
 
 function SetActivity(post){

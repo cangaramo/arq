@@ -334,7 +334,7 @@ strong {
 
 .documents .box {
   box-shadow: 1px 2px 20px 2px rgba(0, 0, 0, 0.28);
-  height: 350px;
+  height: 185px;
   background: white; }
 
 .updates .box {
@@ -1293,3 +1293,37 @@ img.gform_ajax_spinner {
   height: 50px;
   width: 50px;
   border-radius: 0 0 0 50%; }
+
+.press-kit {
+  color: white; }
+  .press-kit hr {
+    border-top: 1px solid rgba(255, 255, 255, 0.68); }
+  .press-kit p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.68); }
+
+/* Modal copy */
+@media (min-width: 576px) {
+  .modalCopy .modal-dialog {
+    max-width: 800px; } }
+
+.modalCopy .modal-dialog .modal-content {
+  border-radius: 0; }
+  .modalCopy .modal-dialog .modal-content .modal-header {
+    padding: 35px;
+    padding-bottom: 0;
+    border: none; }
+    .modalCopy .modal-dialog .modal-content .modal-header .close {
+      font-family: -webkit-pictograph;
+      font-size: 33px;
+      margin-top: -21px; }
+      .modalCopy .modal-dialog .modal-content .modal-header .close:focus {
+        outline: none; }
+  .modalCopy .modal-dialog .modal-content .modal-body {
+    padding: 35px;
+    padding-top: 25px; }
+    .modalCopy .modal-dialog .modal-content .modal-body p {
+      font-size: 16px; }
+    .modalCopy .modal-dialog .modal-content .modal-body img {
+      max-width: 100%;
+      max-height: 400px; }

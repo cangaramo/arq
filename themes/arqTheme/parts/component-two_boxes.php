@@ -22,26 +22,46 @@
 
                 <div class="col-lg-5 offset-lg-1 my-3">
                     <div class="box">
-                        <div class="overflow-hidden" onClick="redirectTo('<?php echo $box['link'] ?>')"><div class="bg-image thumbnail" style="background-image:url('<?php echo $box['image']?>')"></div></div>
+
+                        <?php if ($box['label_link']):  ?>
+                            <div class="overflow-hidden" onClick="redirectTo('<?php echo $box['link'] ?>')"><div class="bg-image thumbnail" style="background-image:url('<?php echo $box['image']?>')"></div></div>
+                        <?php else: ?>
+                            <div><div class="bg-image" style="height:170px; background-image:url('<?php echo $box['image']?>')"></div></div>
+                        <?php endif?>
+
                         <div class="px-4 py-2">
                             <h3 class="my-3"><?php echo $box['title'] ?></h3>
                             <p><?php echo $box['text']?></p>
-                            <div class="absolute-link">
-                                <a class="link" href="<?php echo $box['link'] ?>"><?php echo $box['label_link']?></a>
-                            </div>
+
+                            <?php if ($box['label_link']):  ?>
+                                <div class="absolute-link">
+                                    <a class="link" href="<?php echo $box['link'] ?>"><?php echo $box['label_link']?></a>
+                                </div>
+                            <?php endif ?>
+
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-5 offset-lg-1 my-3">
                     <div class="box">
-                        <div class="overflow-hidden" onClick="redirectTo('<?php echo $box['link'] ?>')"><div class="bg-image thumbnail" style="background-image:url('<?php echo $box2['image']?>')"></div></div>
+
+                        <?php if ($box2['label_link']):  ?>
+                            <div class="overflow-hidden" onClick="redirectTo('<?php echo $box2['link'] ?>')"><div class="bg-image thumbnail" style="background-image:url('<?php echo $box2['image']?>')"></div></div>
+                        <?php else: ?>
+                            <div><div class="bg-image" style="height: 170px; background-image:url('<?php echo $box2['image']?>')"></div></div>
+                        <?php endif?>
+
                         <div class="px-4 py-2">
                             <h3 class="my-3"><?php echo $box2['title'] ?></h3>
                             <p><?php echo $box2['text']?></p>
-                            <div class="absolute-link">
-                                <a class="link" href="<?php echo $box['link'] ?>"><?php echo $box['label_link']?></a>
-                            </div>
+
+                            <?php if ($box2['label_link']):  ?>
+                                <div class="absolute-link">
+                                    <a class="link" href="<?php echo $box2['link'] ?>"><?php echo $box2['label_link']?></a>
+                                </div>
+                            <?php endif ?>
+
                         </div>
                     </div>
                 </div>

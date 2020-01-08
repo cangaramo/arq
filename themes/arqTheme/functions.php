@@ -50,7 +50,7 @@ function load_posts() {
 
 	/* General arguments */
 	$args = array(
-		'post_type'   => array('page', 'news', 'publications', 'responsibility'),
+		'post_type'   => array('page', 'news', 'publications', 'responsibility', 'search_term'),
 		'orderby' => 'relevance', 
 		'order'	=> 'ASC',
 		'posts_per_page' => 5,
@@ -305,3 +305,26 @@ function set_activity() {
 add_action( 'wp_ajax_nopriv_set_activity', 'set_activity' );
 add_action( 'wp_ajax_set_activity', 'set_activity' );
 
+
+function custom_login_failed( $username ) {
+    $referrer = $_SERVER['HTTP_REFERER'];
+ 
+    if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
+		$siteurl = home_url();
+		$url = $siteurl . "/login?login=failed'";
+        wp_redirect($url );
+   //exit;
+    }
+}
+add_action( 'wp_login_failed', 'custom_login_failed' );
+
+
+/* Where to go if any of the fields were empty */
+function verify_user_pass($user, $username, $password) {
+	$login_page  = home_url('/login/');
+	if($username == "" || $password == "") {
+		wp_redirect($login_page . "?login=empty");
+		exit;
+	}
+}
+add_filter('authenticate', 'verify_user_pass', 1, 3);

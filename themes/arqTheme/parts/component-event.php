@@ -1,9 +1,17 @@
 <?php 
     $bg_colour = $values['bg_colour'];
+    $button_colour = $values['button_colour'];
     $event = $values['event'];
     $event_title = get_the_title($event);
     $event_fields = get_fields($event);
     $event_permalink = get_the_permalink($event);
+
+    if ($button_colour == "White") {
+        $class_btn = "link-white";
+    }
+    else {
+        $class_btn = "link";
+    }
 ?>
 
 <div class="position-relative color-white" style="background:<?php echo $bg_colour ?>">
@@ -14,7 +22,7 @@
                 <div class="more-padding-top">
                     <h2><?php echo $event_title ?></h2>
                     <div class="my-4"><?php echo $event_fields['description'] ?></div>
-                    <a class="link" href="<?php echo $event_permalink ?>">More</a>
+                    <a class="<?php echo $class_btn ?>" href="<?php echo $event_permalink ?>">More</a>
                 </div>
             </div>
         </div>

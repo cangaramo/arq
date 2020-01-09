@@ -154,6 +154,9 @@ a {
 strong {
   font-weight: 600; }
 
+.bigger-font-size {
+  font-size: 21px; }
+
 .breadcrumbs {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -241,7 +244,7 @@ strong {
 
 @media (min-width: 992px) {
   .w-lg-50 {
-    width: 50%; } }
+    width: 60%; } }
 
 @media (min-width: 992px) {
   .more-padding-top {
@@ -1305,7 +1308,7 @@ img.gform_ajax_spinner {
 /* Modal copy */
 @media (min-width: 576px) {
   .modalCopy .modal-dialog {
-    max-width: 800px; } }
+    max-width: 950px; } }
 
 .modalCopy .modal-dialog .modal-content {
   border-radius: 0; }
@@ -1348,3 +1351,36 @@ select {
   color: #585858; }
   select:focus {
     outline: none; }
+
+.stat {
+  border-left: 1px solid gray;
+  color: #585858; }
+  .stat .number {
+    font-size: 47px !important;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif; }
+  .stat .description {
+    font-size: 13.5px;
+    line-height: 17px; }
+
+.table-materials tbody td, .table-materials tbody th, .table-materials thead td, .table-materials thead th {
+  text-align: center;
+  font-weight: normal;
+  padding: 4px 10px;
+  border: 2px solid white; }
+
+.table-materials tbody tr {
+  background: #F2F2F2; }
+
+.table-materials .bg-red {
+  background: #C5040B;
+  color: white; }
+
+.table-materials .bg-gray {
+  background: #565656;
+  color: white; }
+
+#chart {
+  width: 260px;
+  height: 260px; }

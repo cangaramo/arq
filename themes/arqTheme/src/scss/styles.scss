@@ -52,7 +52,7 @@ body {
 
 .w-lg-50 {
     @media (min-width: 992px){
-        width: 50%;
+        width: 60%;
     }
 }
 
@@ -274,7 +274,7 @@ img.gform_ajax_spinner {
     .modal-dialog {
 
         @media (min-width: 576px){
-            max-width: 800px;
+            max-width: 950px;
         }
 
         .modal-content {
@@ -338,4 +338,52 @@ select {
     &:focus {
         outline: none;
     }
+}
+
+.stat {
+    border-left: 1px solid gray;
+    color: $dark_gray;
+
+    .number {
+        font-size: 47px !important;
+        letter-spacing: 0.5px;
+        font-weight: 300;
+        font-family: $roboto;
+    }
+    .description {
+        font-size: 13.5px;
+        line-height: 17px;
+    }
+}
+
+.table-materials {
+
+    tbody, thead {
+        td, th {
+            text-align: center;
+            font-weight: normal;
+            padding: 4px 10px;
+            border: 2px solid white;
+        }
+    }
+
+    tbody tr {
+        background: #F2F2F2;
+    }
+
+    .bg-red {
+       background: #C5040B;
+       color: white;
+    }
+
+    .bg-gray {
+        background: #565656;
+        color: white;
+     }
+
+}
+
+#chart {
+    width: 260px;
+    height: 260px;
 }

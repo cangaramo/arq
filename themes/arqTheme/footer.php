@@ -15,5 +15,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
 
 
+<!-- D3 -->
+<script src="https://d3js.org/d3.v3.min.js"> </script>
+
 </body>
 </html>

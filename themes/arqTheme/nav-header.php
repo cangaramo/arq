@@ -126,10 +126,12 @@
                                 </div>
 
                                 <!-- Desktop -->
-                                <a href="<?php echo $url ?>" class="nav-item nav-link dropdown-toggle <?php echo $class ?> d-none d-lg-block" id="dropdownMenuButton" ><?php echo $title ?></a>
+                                <a href="<?php echo $url ?>" class="nav-item nav-link <?php echo $class ?> d-none d-lg-block" id="dropdownMenuButton" ><?php echo $title ?></a>
 
                                <!-- Dropdown -->
                                 <div class="dropdown-menu m-0" aria-labelledby="dropdownMenuLink">
+
+                                    <div class="arrow-up"></div>
 
                                     <?php foreach ($menuitems as $menusubitem):
                                         $parentsubitem = $menusubitem->menu_item_parent;

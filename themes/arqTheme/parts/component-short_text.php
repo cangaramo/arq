@@ -1,6 +1,7 @@
 <?php 
     $text = $values['short_text'];
     $position  = $values['position'];
+    $width = $values['width'];
 
     if ($position == "Right") {
         $align = "justify-content-end";
@@ -11,11 +12,19 @@
     else {
         $align = "justify-content-center";
     }
+
+
+    if($width == "Short"){
+        $class = "w-lg-50";
+    }
+    else if ($width == "Medium"){
+        $class = "w-lg-75";
+    }
 ?>
 
 <div class="container my-5">
     <div class="d-flex <?php echo $align ?> w-100 short-text">
-        <div class="w-lg-50">
+        <div class="<?php echo $class ?>">
             <?php echo $text ?>
         </div>
     </div>

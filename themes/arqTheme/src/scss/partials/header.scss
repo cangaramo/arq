@@ -127,6 +127,38 @@ header {
     }
 }
 
+.arrow-up {
+    width: 0px;
+    height: 0px;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid $red;
+    margin-left: 12px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 0px;
+    background: white;
+    padding: 0;
+
+    .dropdown-item {
+        background: $red;
+        color: white !important;
+        text-transform: uppercase;
+        padding: 12px 13px 7px 13px;
+        font-size: 14px;
+
+        &:hover {
+            color: $black !important;
+        }
+    }
+}
+
 .top-icons {
 
     .fab {

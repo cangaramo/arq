@@ -347,6 +347,12 @@ function my_mce_before_init_insert_formats( $init_array ) {
 			'classes' => 'bigger-font-size',
 			'wrapper' => true,
 		),
+		array(  
+			'title' => 'Red font',  
+			'block' => 'span',  
+			'classes' => 'red-font',
+			'wrapper' => true,
+		),
 	);  
 	$init_array['style_formats'] = json_encode( $style_formats );  
 	return $init_array;  

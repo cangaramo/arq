@@ -43,9 +43,16 @@ body {
 }
 
 
+
 .w-lg-75{
     @media (min-width: 992px){
         width: 75%;
+    }
+}
+
+.w-lg-40{
+    @media (min-width: 992px){
+        width: 40%;
     }
 }
 
@@ -386,4 +393,20 @@ select {
 #chart {
     width: 260px;
     height: 260px;
+}
+
+
+.locations {
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
+
+.four-boxes {
+
+    p {
+        font-size: 16px;
+    }
 }

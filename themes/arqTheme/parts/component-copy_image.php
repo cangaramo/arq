@@ -14,6 +14,11 @@
         $class_bg = "bg-whitesmoke";
         $class_btn = "link";
     }
+
+    $lightbox = $values['lightbox'];
+    $text = $values['lightbox_text'];
+    $vimeo_id = $values['vimeo_id'];
+
 ?>
 
 <div class="position-relative copy-image <?php echo $class_bg ?>" id="copy-image<?php echo $component_index?>">
@@ -27,9 +32,15 @@
                 <div class="py-5 my-lg-5 text position-relative" style="opacity:0; top: 100px">
                     <h2><?php echo $title ?></h2>
                     <div class="mb-4"><?php echo $copy ?></div>
-                    <?php if ($button_label) :?>
+
+                    <?php if ($button_label && !$lightbox) :?>
                         <a class="<?php echo $class_btn?>" href="<?php echo $button_link ?>"><?php echo $button_label?></a>
                     <?php endif ?>
+
+                    <?php if ($lightbox): ?>
+                        <a class="link"  class="btn btn-primary" data-toggle="modal" data-target="#modal<?php echo $index ?>">More</a>
+                    <?php endif ?>
+
                 </div>
             </div>
         </div>
@@ -48,3 +59,31 @@
 
 <hr class="red-line">
 
+
+<div class="modal fade modalCopy" id="modal<?php echo $index ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-body">
+                
+                <div class="d-flex justify-content-between">
+                    <h3 class="my-3">More info</h3>
+                    <a href=""><img height="20" class="close-film" data-dismiss="modal" src="<?php echo get_bloginfo('template_url')?>/assets/images/close.png"></a>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-6">
+                        <?php echo $text ?>
+                    </div>
+                    <div class="col-6">
+                        <div class='embed-container'>
+                            <iframe src='https://player.vimeo.com/video/<?php echo $vimeo_id ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                        </div>  
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

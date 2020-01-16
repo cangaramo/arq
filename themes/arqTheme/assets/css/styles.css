@@ -148,6 +148,9 @@ a {
 .color-red {
   color: #C30019; }
 
+.red-font {
+  color: #C30019; }
+
 .align-icon {
   vertical-align: sub; }
 
@@ -241,6 +244,10 @@ strong {
 @media (min-width: 992px) {
   .w-lg-75 {
     width: 75%; } }
+
+@media (min-width: 992px) {
+  .w-lg-40 {
+    width: 40%; } }
 
 @media (min-width: 992px) {
   .w-lg-50 {
@@ -541,6 +548,31 @@ header {
 
 .navbar-toggler.collapsed .bottom-bar {
   transform: rotate(0); }
+
+.arrow-up {
+  width: 0px;
+  height: 0px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid #C30019;
+  margin-left: 12px; }
+
+.dropdown:hover .dropdown-menu {
+  display: block; }
+
+.dropdown-menu {
+  border: none;
+  border-radius: 0px;
+  background: white;
+  padding: 0; }
+  .dropdown-menu .dropdown-item {
+    background: #C30019;
+    color: white !important;
+    text-transform: uppercase;
+    padding: 12px 13px 7px 13px;
+    font-size: 14px; }
+    .dropdown-menu .dropdown-item:hover {
+      color: rgba(0, 0, 0, 0.85) !important; }
 
 .top-icons .fab {
   color: rgba(0, 0, 0, 0.85);
@@ -1384,3 +1416,9 @@ select {
 #chart {
   width: 260px;
   height: 260px; }
+
+.locations p {
+  margin-bottom: 0; }
+
+.four-boxes p {
+  font-size: 16px; }

@@ -16,8 +16,9 @@
     }
 
     $lightbox = $values['lightbox'];
-    $text = $values['lightbox_text'];
-    $vimeo_id = $values['vimeo_id'];
+    $text1 = $values['text_1'];
+    $text2 = $values['text_2'];
+    $lightbox_image = $values['lightbox_image'];
 
 ?>
 
@@ -67,20 +68,21 @@
             <div class="modal-body">
                 
                 <div class="d-flex justify-content-between">
-                    <h3 class="my-3">More info</h3>
+                    <div></div>
                     <a href=""><img height="20" class="close-film" data-dismiss="modal" src="<?php echo get_bloginfo('template_url')?>/assets/images/close.png"></a>
                 </div>
 
+                <div class="row mt-3">
+                    <div class="col-6">
+                        <?php echo $text1 ?>
+                    </div>
+                    <div class="col-6">
+                        <?php echo $text2 ?>
+                    </div>
+                </div>
 
-                <div class="row">
-                    <div class="col-6">
-                        <?php echo $text ?>
-                    </div>
-                    <div class="col-6">
-                        <div class='embed-container'>
-                            <iframe src='https://player.vimeo.com/video/<?php echo $vimeo_id ?>' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                        </div>  
-                    </div>
+                <div>
+                    <img src="<?php echo $lightbox_image ?>">
                 </div>
 
             </div>

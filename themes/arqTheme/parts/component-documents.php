@@ -30,4 +30,28 @@ $terms = get_terms( array(
     </div>
 </div>
 
-<!-- Add ajax -->
+
+<!-- Updates and documents -->
+<!-- Modal -->
+<?php 
+$disclaimer = get_field('disclaimer', 'option'); 
+?>
+<div class="modal fade" id="disclaimerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered container" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header"></div>
+
+            <div class="modal-body px-4">
+                <div><?php echo $disclaimer ?></div>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="accept-btn btn btn-primary" data-dismiss="modal">Accept</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>

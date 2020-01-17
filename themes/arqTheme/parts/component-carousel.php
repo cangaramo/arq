@@ -39,11 +39,11 @@
 
                     <div class="layer h-100 w-100">
                         <div class="container px-lg-5 px-lg-0 h-100">
-                            <div class="col-lg-6 h-100">
+                            <div class="col-lg-8 h-100">
                                 <div class="d-flex align-items-center h-100 w-100">
                                     <div>
                                         <h1 class="heading"><?php echo $item['title'] ?></h1>
-                                        <p class="my-4 size-17"><?php echo $item['text'] ?></p>
+                                        <p class="mb-4 mt-3 size-17"><?php echo $item['text'] ?></p>
                                         <a class="link" href="<?php echo $item['button_link'] ?>"><?php echo $item['button_label'] ?></a>
                                     </div>
                                 </div>

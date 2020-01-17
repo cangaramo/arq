@@ -110,9 +110,12 @@
                             <div class="dropdown">
 
                                 <!-- Mobile -->
-                                <a href="<?php echo $url ?>" class="nav-item nav-link mobile-toggle dropdown-toggle <?php echo $class ?> d-inline-block d-lg-none w-100" id="dropdownMenuButton" ><span><?php echo $title ?></span></a>
-
-                                <div class="d-block d-lg-none">
+                                <div class="d-flex justify-content-center align-items-center d-inline-block d-lg-none">
+                                    <a href="<?php echo $url ?>" class="nav-item nav-link mobile-toggle dropdown-toggle <?php echo $class ?>" id="dropdownMenuButton" ><span><?php echo $title ?></span></a>
+                                    <a class="mt-1"><i class="ml-2 fas fa-chevron-down"></i></a>
+                                </div>
+                                
+                                <div class="links d-lg-none">
                                     <?php foreach ($menuitems as $menusubitem):
                                             $parentsubitem = $menusubitem->menu_item_parent;
                                             $titlesubitem = $menusubitem->title;
@@ -144,6 +147,8 @@
                                         <?php endif; 
                                     endforeach; ?>
                                 </div>
+
+                                <hr>
 
                             </div>
 

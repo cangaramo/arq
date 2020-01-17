@@ -386,6 +386,12 @@ strong {
     opacity: 1;
     top: 0; } }
 
+.add-shadow {
+  box-shadow: 1px 2px 20px 2px rgba(0, 0, 0, 0.28); }
+
+.partnerships .item p {
+  font-size: 16.5px; }
+
 /* PARALLAX */
 .parallax {
   height: 500px;
@@ -557,8 +563,9 @@ header {
   border-bottom: 15px solid #C30019;
   margin-left: 12px; }
 
-.dropdown:hover .dropdown-menu {
-  display: block; }
+@media (min-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    display: block; } }
 
 .dropdown-menu {
   border: none;
@@ -573,6 +580,18 @@ header {
     font-size: 14px; }
     .dropdown-menu .dropdown-item:hover {
       color: rgba(0, 0, 0, 0.85) !important; }
+
+.dropdown-toggle::after {
+  display: none; }
+
+.dropdown .links {
+  display: none; }
+
+.dropdown .fas {
+  cursor: pointer;
+  color: #C30019; }
+  .dropdown .fas:hover {
+    color: rgba(0, 0, 0, 0.85); }
 
 .top-icons .fab {
   color: rgba(0, 0, 0, 0.85);
@@ -1226,6 +1245,9 @@ footer {
 
 #carouselHome {
   height: 500px; }
+  #carouselHome h1 {
+    font-size: 40px;
+    line-height: 40px; }
   #carouselHome .carousel-item .item {
     height: 500px; }
   #carouselHome .carousel-control-prev-icon {
@@ -1422,3 +1444,41 @@ select {
 
 .four-boxes p {
   font-size: 16px; }
+
+@media (min-width: 576px) {
+  #disclaimerModal .modal-dialog {
+    max-width: 540px; } }
+
+@media (min-width: 768px) {
+  #disclaimerModal .modal-dialog {
+    max-width: 720px; } }
+
+@media (min-width: 992px) {
+  #disclaimerModal .modal-dialog {
+    max-width: 960px; } }
+
+@media (min-width: 1200px) {
+  #disclaimerModal .modal-dialog {
+    max-width: 1140px; } }
+
+#disclaimerModal .modal-dialog .modal-content {
+  border-radius: 0;
+  border: none; }
+
+#disclaimerModal .modal-dialog .modal-body {
+  max-height: 500px;
+  overflow: scroll; }
+
+#disclaimerModal .modal-dialog .modal-header {
+  border: none; }
+
+#disclaimerModal .modal-dialog .btn-primary {
+  color: #fff;
+  background-color: #C30019;
+  border-color: #C30019;
+  border-radius: 0; }
+  #disclaimerModal .modal-dialog .btn-primary:focus {
+    outline: none; }
+  #disclaimerModal .modal-dialog .btn-primary:hover {
+    background: #9e0317;
+    border-color: #9e0317; }

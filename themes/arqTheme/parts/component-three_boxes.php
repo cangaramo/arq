@@ -71,8 +71,8 @@
                                             <?php 
                                             $stats = $box['stats'];
                                             foreach ($stats as $stat):?>
-                                            <div class="col-6">
-                                                <div class="stat pl-3">
+                                            <div class="col-lg-6">
+                                                <div class="stat pl-3 mb-4">
                                                     <p class="mb-0 number"><span><?php echo $stat['number']?></span><span><?php echo $stat['symbol']?></span></p>
                                                     <p class="mb-0 description"><span><?php echo $stat['description']?></span></p>
                                                 </div>
@@ -85,7 +85,7 @@
                                 <?php if ($box['add_chart']): ?>
                                     <div class="row">
                                     
-                                        <div class="col-6 px-4">
+                                        <div class="col-lg-6 px-4">
 
                                             <!-- First table -->
                                             <table class="table table-materials">
@@ -155,7 +155,7 @@
 
                                         </div>
 
-                                        <div class="col-6">
+                                        <div class="col-lg-6">
                                             <div>
                                                 <img height="350" src="<?php echo get_bloginfo('template_url')?>/assets/images/chart.png">
                                                 <!-- 

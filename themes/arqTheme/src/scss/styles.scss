@@ -410,3 +410,59 @@ select {
         font-size: 16px;
     }
 }
+
+
+#disclaimerModal {
+
+    .modal-dialog {
+
+        @media (min-width: 576px){
+            max-width: 540px;
+        }
+
+        @media (min-width: 768px){
+            max-width: 720px;
+        }
+
+
+        @media (min-width: 992px){
+            max-width: 960px;
+        }
+
+        @media (min-width: 1200px){
+            max-width: 1140px;
+        }
+
+        .modal-content {
+            border-radius: 0;
+            border: none;
+        }
+
+        .modal-body{
+            max-height: 500px;
+            overflow: scroll;
+        }
+
+        .modal-header {
+            border: none;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: $red;
+            border-color: $red;
+            border-radius: 0;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                background: #9e0317;
+                border-color: #9e0317;
+            }
+        }
+        
+    }
+
+}

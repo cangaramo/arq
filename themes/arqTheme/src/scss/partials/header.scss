@@ -136,8 +136,10 @@ header {
     margin-left: 12px;
 }
 
-.dropdown:hover .dropdown-menu {
-    display: block;
+@media (min-width:992px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 }
 
 .dropdown-menu {
@@ -156,6 +158,24 @@ header {
         &:hover {
             color: $black !important;
         }
+    }
+}
+
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown .links {
+    display: none;
+}
+
+.dropdown .fas {
+    cursor: pointer;
+    color: $red;
+
+    &:hover {
+        color: $black;
     }
 }
 

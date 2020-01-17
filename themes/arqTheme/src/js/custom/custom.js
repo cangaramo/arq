@@ -479,8 +479,10 @@ $( document ).ready(function() {
 
 
     $('.dropdown .fas').click(function(){ 
-        $('.dropdown div').toggle();
-    });
+        index = $('.dropdown .fas').index(this);
+        console.log(index);
+        $('.dropdown').eq(index).find("div").toggle();
+    }); 
 
     if( $('#documents-response').length ) {
 

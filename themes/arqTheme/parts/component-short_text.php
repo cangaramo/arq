@@ -3,6 +3,7 @@
     $position  = $values['position'];
     $width = $values['width'];
     $anchor = $values['anchor'];
+    $bg_colour = $values['bg_colour'];
 
     if ($position == "Right") {
         $align = "justify-content-end";
@@ -21,12 +22,18 @@
     else if ($width == "Medium"){
         $class = "w-lg-75";
     }
+
+    if (!$bg_colour) {
+        $bg_colour = "#FFFFFF";
+    }
 ?>
 
-<div id="<?php echo $anchor ?>" class="container my-5">
-    <div class="d-flex <?php echo $align ?> w-100 short-text">
-        <div class="<?php echo $class ?>">
-            <?php echo $text ?>
+<div style="background:<?php echo $bg_colour ?>">
+    <div id="<?php echo $anchor ?>" class="container py-5">
+        <div class="d-flex <?php echo $align ?> w-100 short-text">
+            <div class="<?php echo $class ?>">
+                <?php echo $text ?>
+            </div>
         </div>
     </div>
 </div>

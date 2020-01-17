@@ -10,6 +10,7 @@
         <div class="d-flex justify-content-center w-100">
             <div class="w-lg-40 text-center">
                 <div><?php echo $text ?></div>
+                <img class="mt-2" height="20" width="auto" src="<?php echo get_bloginfo('template_url')?>/assets/images/vitol.png">
             </div>
         </div>
 

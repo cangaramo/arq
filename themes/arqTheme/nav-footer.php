@@ -14,6 +14,13 @@
         </div>
     </div>
 
+    <?php if(isset($_COOKIE['accepted'])) : ?>
+    <div class="container text-center my-5">
+        <p style="font-size:15px;">Arq reserves the right to update this disclaimer at any time without prior notice. You can review the disclaimer here when visiting the site. A link is also available in the footer of the page.
+        </p>
+    </div>
+    <?php endif ?>
+
     <div class="bg-black">
         <div class="container pt-5">
             <div class="row">

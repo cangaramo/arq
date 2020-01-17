@@ -8,10 +8,14 @@
 
         <?php foreach ($boxes as $box): ?>
 
-            <div class="col-lg-3">
-                <img class="w-100" src="<?php echo $box['image'] ?>">
-                <p class="mt-3 mb-2"><strong><?php echo $box['title']?></strong></p>
-                <p><?php echo $box['text'] ?></p>
+            <div class="col-lg-3 px-lg-2">
+                <div class="add-shadow h-100">
+                    <img class="w-100" src="<?php echo $box['image'] ?>">
+                    <div class="px-3">
+                        <p class="mt-3 mb-2"><strong><?php echo $box['title']?></strong></p>
+                        <p><?php echo $box['text'] ?></p>
+                    </div>
+                </div>
             </div>
 
         <?php endforeach ?>

@@ -2,6 +2,7 @@
     $text = $values['short_text'];
     $position  = $values['position'];
     $width = $values['width'];
+    $anchor = $values['anchor'];
 
     if ($position == "Right") {
         $align = "justify-content-end";
@@ -22,7 +23,7 @@
     }
 ?>
 
-<div class="container my-5">
+<div id="<?php echo $anchor ?>" class="container my-5">
     <div class="d-flex <?php echo $align ?> w-100 short-text">
         <div class="<?php echo $class ?>">
             <?php echo $text ?>

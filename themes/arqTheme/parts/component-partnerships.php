@@ -1,8 +1,9 @@
 <?php 
     $text = $values['text'];
     $images = $values['images'];
+    $anchor = $values['anchor'];
 ?>
-<div class="bg-whitesmoke">
+<div id="<?php echo $anchor ?>" class="bg-whitesmoke">
 
     <div class="container partnerships py-5">
 

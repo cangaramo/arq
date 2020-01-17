@@ -1,13 +1,14 @@
 <?php 
-
 $terms = get_terms( array(
     'taxonomy' => 'document_year',
     'hide_empty' => false,
 ) );
 
+$anchor = $values['anchor'];
+
 ?>
 
-<div class="bg-ligth_gray">
+<div id="<?php echo $anchor ?>" class="bg-ligth_gray">
     <div class="container py-5">
 
         <div class="d-flex justify-content-between my-4">

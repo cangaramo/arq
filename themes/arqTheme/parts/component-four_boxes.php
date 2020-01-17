@@ -1,8 +1,9 @@
 <?php 
     $boxes = $values['boxes'];
+    $anchor = $values['anchor'];
 ?>
 
-<div class="container four-boxes my-5 py-2">
+<div id="<?php echo $anchor ?>" class="container four-boxes my-5 py-2">
     <div class="row">
 
         <?php foreach ($boxes as $box): ?>

@@ -1,6 +1,10 @@
 <?php 
     $items = $values['items'];
+
+    $anchor = $values['anchor'];
 ?>
+
+<div id="<?php echo $anchor ?>"></div>
 
 <!-- Carousel -->
 <div id="carouselHome" class="carousel slide" data-ride="carousel" style="">

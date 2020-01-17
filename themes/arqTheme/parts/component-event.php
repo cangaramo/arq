@@ -23,9 +23,11 @@
     else {
         $class_btn = "link";
     }
+
+    $anchor = $values['anchor'];
 ?>
 
-<div class="position-relative color-white" style="background:<?php echo $bg_colour ?>">
+<div id="<?php echo $anchor ?>" class="position-relative color-white" style="background:<?php echo $bg_colour ?>">
 
     <div class="container position-relative" style="z-index: 2">
         <div class="row">

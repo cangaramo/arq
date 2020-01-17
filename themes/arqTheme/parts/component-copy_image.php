@@ -20,9 +20,10 @@
     $text2 = $values['text_2'];
     $lightbox_image = $values['lightbox_image'];
 
+    $anchor = $values['anchor'];
 ?>
 
-<div class="position-relative copy-image <?php echo $class_bg ?>" id="copy-image<?php echo $component_index?>">
+<div id="<?php echo $anchor ?>" class="position-relative copy-image <?php echo $class_bg ?>" id="copy-image<?php echo $component_index?>">
 
     <!-- Mobile -->
     <img class="w-100 d-block d-md-none" src="<?php echo $image ?>">

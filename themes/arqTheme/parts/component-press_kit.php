@@ -3,8 +3,9 @@
     $img_guidelines = $values['guidelines_image'];
     $brand_guidelines = $values['brand_guidelines'];
     $images = $values['images'];
+    $anchor = $values['anchor'];
 ?>
-<div class="bg-dark_gray press-kit">
+<div id="<?php echo $anchor ?>" class="bg-dark_gray press-kit">
 
     <div class="container py-5">
 

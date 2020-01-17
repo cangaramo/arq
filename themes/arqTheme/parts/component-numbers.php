@@ -1,10 +1,11 @@
 <?php 
     $bg_image = $values['background_image'];
     $numbers = $values['numbers'];
+    $anchor = $values['anchor'];
 ?>
 
 <div id="numbers-trigger"></div>
-<div class="bg-image" style="background-image:url(<?php echo $bg_image ?>)">
+<div id="<?php echo $anchor ?>" class="bg-image" style="background-image:url(<?php echo $bg_image ?>)">
 
     <div class="bg-layer">
         <div class="container more-padding-top" >

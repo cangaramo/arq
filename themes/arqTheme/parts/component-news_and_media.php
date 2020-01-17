@@ -7,9 +7,10 @@ $news = get_posts($args);
 
 $query = new WP_Query($args);
 $count = $query->post_count;
+$anchor = $values['anchor'];
 ?>
 
-<div class="position-relative">
+<div id="<?php echo $anchor ?>" class="position-relative">
 
     <div class="absolute-top w-100 h-100 overflow-hidden">
         <div id="trigger-shapeArq"></div>

@@ -22,8 +22,10 @@
     if ($text_colour2 == "#FFFFFF"){
         $class_layer2 = "bg-layer";
     }
+
+    $anchor = $values['anchor'];
 ?>
-<div>
+<div id="<?php echo $anchor ?>">
 
     <div class="row">
     

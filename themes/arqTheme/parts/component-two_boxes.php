@@ -1,9 +1,11 @@
 <?php 
     $box = $values['box'];
     $box2 = $values['box_2'];
+
+    $anchor = $values['anchor'];
 ?>
 
-<div class="position-relative">
+<div id="<?php echo $anchor ?>" class="position-relative">
 
     <!-- Animation arcs -->
     <div class="arcs d-none d-lg-block">

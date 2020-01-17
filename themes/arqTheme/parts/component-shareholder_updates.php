@@ -1,13 +1,15 @@
+<?php 
+    $anchor = $values['anchor'];
+?>
+
 <div class="bg-dark_gray">
     <div class="container py-5">
-
         <h2 class="color-white pt-3">Shareholder updates</h2>
-
         <div id="updates-response"></div>
-
     </div>
 </div>
 
+<div id="<?php echo $anchor ?>"></div>
 
 <div id="audio-player-cont" style="position: fixed;bottom: 20px;z-index: 5; width: 100%; display: none">
     <div class="d-flex justify-content-center align-items-center">

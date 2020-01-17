@@ -1,9 +1,10 @@
 <?php 
     $title = $values['title'];
     $articles = $values['articles'];
+    $anchor = $values['anchor'];
 ?>
 
-<div class="container my-lg-5 py-5">
+<div id="<?php echo $anchor ?>" class="container my-lg-5 py-5">
 
     <?php if ($title): ?>
         <h2 class="text-center pb-5"><?php echo $title ?></h2>

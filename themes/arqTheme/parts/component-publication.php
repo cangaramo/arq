@@ -19,9 +19,11 @@
             $text_colour = "#212529";
         }
     }
+
+    $anchor = $values['anchor'];
 ?>
 
-<div class="position-relative" 
+<div id="<?php echo $anchor ?>" class="position-relative" 
     style="background:<?php echo $bg_colour ?>; color: <?php echo $text_colour ?>">
 
     <!-- Animation -->

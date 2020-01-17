@@ -21,10 +21,14 @@
         }
        
     }
+
+    $anchor = $values['anchor'];
 ?>
 
+<div id="<?php echo $anchor ?>"></div>
+
 <!-- Desktop -->
-<div class="d-none d-md-block">
+<div   class="d-none d-md-block">
     <?php if ($background == "Solid colour"): ?>
         <div class="banner position-relative" style="background:<?php echo $bg ?>">
     <?php else: ?>

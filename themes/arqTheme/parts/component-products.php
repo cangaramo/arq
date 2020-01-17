@@ -4,10 +4,11 @@
         'posts_per_page' => -1
     );
     $products = get_posts($args);
+    $anchor = $values['anchor'];
 ?>
 
 <div class="bg-image" style="background-image:url('<?php echo get_bloginfo('template_url')?>/assets/images/bg-1.png')">
-<div class="container products py-5">
+<div id="<?php echo $anchor ?>" class="container products py-5">
 
     <h2 class="text-center py-5">Products</h2>
 

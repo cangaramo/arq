@@ -1,9 +1,10 @@
 <?php 
     $locations = $values['locations'];
     $text = $values['text'];
+    $anchor = $values['anchor'];
 ?>
 
-<div class="bg-ligth_gray py-2">
+<div id="<?php echo $anchor ?>" class="bg-ligth_gray py-2">
     <div class="container locations py-5">
 
         <div class="d-flex justify-content-center w-100">

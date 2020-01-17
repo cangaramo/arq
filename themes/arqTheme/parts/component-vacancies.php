@@ -4,9 +4,11 @@
         'posts_per_page' => -1
     );
     $vacancies = get_posts($args);
+
+    $anchor = $values['anchor'];
 ?>
 
-<div class="bg-dark_gray color-white">
+<div id="<?php echo $anchor ?>" class="bg-dark_gray color-white">
     <div  id="vacancies" class="container py-5 vacancies">
 
         <h2 class="mb-5">Vacancies</h2>

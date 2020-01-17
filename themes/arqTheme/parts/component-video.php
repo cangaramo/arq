@@ -8,9 +8,11 @@
     if ($text_colour == "#FFFFFF"){
         $class_layer = "bg-layer";
     }
+
+    $anchor = $values['anchor'];
 ?>
 
-<div class="bg-image video-box" id="video-box<?php echo $component_index?>" style="background-image:url('<?php echo $bg_img ?>'); color: <?php echo $text_colour ?>">
+<div id="<?php echo $anchor ?>" class="bg-image video-box" id="video-box<?php echo $component_index?>" style="background-image:url('<?php echo $bg_img ?>'); color: <?php echo $text_colour ?>">
     <div class="w-100 h-100 <?php echo $class_layer ?>">
         <div class="container h-100">
             <div class="d-flex h-100 align-items-center">

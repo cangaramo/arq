@@ -19,7 +19,7 @@
                 <div class="row w-100">
                     <div class="col-lg-6 px-4 px-lg-3">
                         <div class="text position-relative" style="opacity:0; left: -70px">
-                            <img class="d-block mb-5" style="height:85px" src="<?php echo get_bloginfo('template_url')?>/assets/images/play-btn.png">
+                            <a data-toggle="modal" data-target="#videoModal<?php echo $component_index?>"><img class="d-block mb-5" style="height:85px" src="<?php echo get_bloginfo('template_url')?>/assets/images/play-btn.png"></a>
 
                             <?php if ($title): ?>
                                 <h2 class="pfdin mt-5"><?php echo $title ?></h2>

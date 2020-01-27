@@ -480,7 +480,6 @@ $( document ).ready(function() {
 
     $('.dropdown .fas').click(function(){ 
         index = $('.dropdown .fas').index(this);
-        console.log(index);
         $('.dropdown').eq(index).find("div").toggle();
     }); 
 

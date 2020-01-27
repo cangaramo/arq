@@ -9,7 +9,7 @@
 
         <div class="row">
         
-            <div class="col-lg-7 mb-4">
+            <div class="col-lg-7 order-last order-lg-first">
 
                 <div class="row">
                     <?php foreach ($images as $image): ?>
@@ -25,7 +25,7 @@
 
             </div>
 
-            <div class="col-lg-4 offset-lg-1">
+            <div class="col-lg-4 offset-lg-1 mb-4 order-first order-lg-last">
                 <h3 class="mb-3">Partnerships</h3>
                 <div><?php echo $text ?></div>
             </div>

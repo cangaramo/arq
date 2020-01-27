@@ -902,6 +902,8 @@ header {
 
 .video-box {
   height: 650px; }
+  .video-box img {
+    cursor: pointer; }
 
 .embed-container {
   position: relative;

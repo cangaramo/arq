@@ -10,6 +10,8 @@
     endif;
     
     $dashboard_url = get_permalink(233);
+    $login_desc = get_field('login_description', 'option'); 
+    
 ?>
 
 <?php get_header(); ?>
@@ -25,6 +27,8 @@
                 <div class="col-lg-6">
 
                 <h2 class="mb-4">Login</h2>
+
+                    <div><?php echo $login_desc ?></div>
 
                     <?php 
 

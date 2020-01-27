@@ -15,7 +15,11 @@
 
                     <div class="col-sm num my-3">
                         <div class="w-100">
-                            <span><?php echo $number['symbol'] ?></span><span class="counter"><?php echo $number['number'] ?></span><span><?php echo $number['value'] ?></span>
+                            <?php if ($number['animation']):?>
+                                <span><?php echo $number['symbol'] ?></span><span class="counter"><?php echo $number['number'] ?></span><span><?php echo $number['value'] ?></span>
+                            <?php else: ?>
+                                <span><?php echo $number['symbol'] ?></span><span><?php echo $number['number'] ?></span><span><?php echo $number['value'] ?></span>
+                            <?php endif ?>
                             <p class="label"><?php echo $number['label'] ?></p>
                         </div>
                     </div>

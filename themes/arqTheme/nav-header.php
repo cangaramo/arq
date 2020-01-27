@@ -167,6 +167,8 @@
                     <!-- Investors area -->
                     <?php if ($logged_in): ?>
                         <a class="nav-item nav-link px-lg-0 mx-lg-3 d-block d-lg-none" href="/arq-investor-area/"><span>Investors</span></a>
+                        <hr>
+                        <a class="nav-item nav-link px-lg-0 mx-lg-3 d-block d-lg-none" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a>
                     <?php else: ?>
                         <a class="nav-item nav-link px-lg-0 mx-lg-3 d-block d-lg-none" href="/login"><span>Investors Login</span></a>
                     <?php endif ?>

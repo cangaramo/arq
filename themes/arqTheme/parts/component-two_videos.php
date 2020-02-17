@@ -39,7 +39,7 @@
                             <div class="row">
                                 <div class="col-lg-7 offset-lg-2">
                                     <div class="text position-relative px-4 px-lg-0" style="opacity:0; left: -70px">
-                                        <img class="d-block mb-5" style="height:85px" src="<?php echo get_bloginfo('template_url')?>/assets/images/play-btn.png">
+                                        <img data-toggle="modal" data-target="#videoModal1-<?php echo $component_index?>" class="d-block mb-5" style="height:85px" src="<?php echo get_bloginfo('template_url')?>/assets/images/play-btn.png">
 
                                         <?php if ($title1): ?>
                                             <h2 class="pfdin mt-5"><?php echo $title1 ?></h2>
@@ -70,7 +70,7 @@
                             <div class="row">
                                 <div class="col-lg-7 offset-lg-2">
                                     <div class="text position-relative px-4 px-lg-0" style="opacity:0; left: -70px">
-                                        <img class="d-block mb-5" style="height:85px" src="<?php echo get_bloginfo('template_url')?>/assets/images/play-btn.png">
+                                        <img class="d-block mb-5" href="#" data-toggle="modal" data-target="#videoModal2-<?php echo $component_index?>" style="height:85px" src="<?php echo get_bloginfo('template_url')?>/assets/images/play-btn.png">
 
                                         <?php if ($title2): ?>
                                             <h2 class="pfdin mt-5"><?php echo $title2 ?></h2>
